@@ -1,4 +1,0 @@
-Profesor: Rafael Ruiz Rubio
-
-Aplicaciones:
-	- Android Studio

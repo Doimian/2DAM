@@ -1,5 +1,0 @@
-Profesor: Rafael Ruiz Rubio
-
-Aplicaciones:
-	- VirtualBox con debian (o cualquier linux)
-	- jcreator // oracle // jkd (8)

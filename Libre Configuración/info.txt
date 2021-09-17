@@ -1,0 +1,6 @@
+Profesor: Rafael Ruiz Rubio
+
+Aplicaciones:
+C++:	 CodeBlocks // Visual Studio
+C#:	 Mono (linux) // Visual Studio (windows)
+Unity:	 Unity hub
