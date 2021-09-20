@@ -1,0 +1,18 @@
+1. Uno de los principales objetivos en la actividad de una empresa privada es:
+	a. Poseer la última tecnología en redes informáticas.
+	b. Realizar investigación y desarrollo.
+   - >	c. Gestionar sus recursos.
+	d. Satisfacer las necesidades del cliente.
+
+Considero que la respuesta es Gestionar sus recursos porque, aunque todos los demás puntos son importantes, 
+para competir con otras empresas de su mismo sector una empresa tiene que administrar sus recursos lo más cuidadosa
+ y expertamente posible con el objetivo de generar un beneficio mayor con las mismas tecnologías y materiales que sus competidores en el sector.
+
+
+2. Los sistemas ERP suelen estar formados por una arquitectura modular donde cada módulo
+gestiona funciones empresariales diferentes
+   - >	a) Verdadero
+	b) Falso
+
+Verdadero, los sistemas ERP suelen ser programas modulares en los que cada módulo se encarga de administrar una función diferente, por ejemplo los pedidos,
+ la logística, el almacen, etc. Esto también facilita la personalización de un sistema ERP para una empresa particular.
