@@ -1,0 +1,13 @@
+ROLES:
+Scrum master: coordinador del grupo
+Proud owner: el que lleva el Backlog (lista limpia y ordenada por prioridad de todos los trabajos que hay que hacer)
+Team member: miembro del equipo.
+
+REUNIONES:
+Planeación: primera reunión donde se deciden la duración de los sprints y se organiza el primero, tiene una duración aproximada de 2 horas por 2 semanas de sprint.
+Daily: reunión diaria que dura en torno a 15 minutos donde se responden 3 preguntas (¿Que hice ayer?, ¿Que voy a hacer hoy?, ¿Que impedimentos he tenido?)
+Review: se hace después de cada sprint y se muestra el resultado del último sprint, tiene una duración aproximada de 1 hora.
+Retrospectiva: se hace después de cada sprint y se acuerda qué puede mejorar en torno al trabajo para el siguiente sprint, tiene una duración aproximada de 2 horas.
+
+MÉTODOS DE TRABAJO:
+Sprint:
