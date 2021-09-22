@@ -7,3 +7,4 @@
 > hacer el horario nuevo en excel
 > hacer los primeros tests de Salesforce que están en http://aula.ieslosmontecillos.es/course/view.php?id=4
 > hacer los primeros 3 ejercicios de T1A1 en Horas de Libre Configuracion
+> sincronizar los workspaces de codeblocks
