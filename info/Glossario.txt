@@ -1,0 +1,1 @@
+MVC (Modelo Vista Controlador): Modelo que tiene como objetivo modularizar las aplicaciones para distribuir los datos)

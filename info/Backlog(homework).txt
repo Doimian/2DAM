@@ -8,3 +8,6 @@
 > hacer los primeros tests de Salesforce que están en http://aula.ieslosmontecillos.es/course/view.php?id=4
 > hacer los primeros 3 ejercicios de T1A1 en Horas de Libre Configuracion
 > sincronizar los workspaces de codeblocks
+> leer el punto 3 del tema introductorio de DI
+> descargar Trello
+> descargar JDK 16 (https://www.oracle.com/java/technologies/downloads/#java16-windows)  y JDK 8 y JDK 12 y NetBeans (https://www.apache.org/dyn/closer.cgi/netbeans/netbeans/12.4/Apache-NetBeans-12.4-bin-windows-x64.exe)(y ver un poco como funciona)

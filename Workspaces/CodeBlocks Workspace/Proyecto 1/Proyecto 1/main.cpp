@@ -55,7 +55,7 @@ void areayperimetro(double b, double a, double &ar, double &per)
 void operacionFactorial(int num, int &res)
 {
     int a = 1;
-    for(int i = 2; i <= num; i++)
+    for(int i = n; i <= num; i++)
     {
         a *= i;
     }
