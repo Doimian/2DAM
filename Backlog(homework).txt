@@ -3,6 +3,7 @@
 > Mirar los videos relacionados con la metodología SCRUM de https://www.youtube.com/c/%C3%81gilEsPorCrisR%C3%BAa
   https://www.youtube.com/watch?v=TRcReyRYIMg
   https://www.youtube.com/watch?v=58timOl2UYo
-> Descargar y mirar como funciona Trello
-> hacer la tarea que ha enviado por correo para empresariales
 > hacer la tarea de SGE(justificando las respuestas) con el titulo: SGE_T1A1_HermidaDamian.pdf
+> hacer el horario nuevo en excel
+> hacer los primeros tests de Salesforce que están en http://aula.ieslosmontecillos.es/course/view.php?id=4
+> hacer los primeros 3 ejercicios de T1A1 en Horas de Libre Configuracion
