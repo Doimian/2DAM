@@ -20,16 +20,16 @@ int main()
     suma(valor1, valor2, resultado);
     cout << "Suma con retorno : " << resultado << endl;
 
-    cout << "Actividad 1.2: area y perimetro de un rectángulo" << endl;
+    cout << "Actividad 1.2: area y perimetro de un rectangulo" << endl;
     cout << "Base: ";
     cin >> valor1;
     cout << "Altura: ";
     cin >> valor2;
     areayperimetro(valor1, valor2, area, perimetro);
-    cout << "Area del rectángulo: " << area << endl;
-    cout << "Perímetro del rectángulo " << perimetro << endl;
+    cout << "Area del rectangulo: " << area << endl;
+    cout << "Perimetro del rectangulo " << perimetro << endl;
 
-    cout << "Actividad 1.3: factorial de un número" << endl;
+    cout << "Actividad 1.3: factorial de un numero" << endl;
     cout << "Numero: ";
     cin >> factorial;
     operacionFactorial(factorial, facres);
@@ -55,7 +55,7 @@ void areayperimetro(double b, double a, double &ar, double &per)
 void operacionFactorial(int num, int &res)
 {
     int a = 1;
-    for(int i = n; i <= num; i++)
+    for(int i = 1; i <= num; i++)
     {
         a *= i;
     }
