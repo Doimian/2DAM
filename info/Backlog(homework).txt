@@ -4,9 +4,8 @@
   https://www.youtube.com/watch?v=TRcReyRYIMg
   https://www.youtube.com/watch?v=58timOl2UYo
 > hacer la tarea de SGE(justificando las respuestas) con el titulo: SGE_T1A1_HermidaDamian.pdf
-> hacer el horario nuevo en excel
 > hacer los primeros tests de Salesforce que están en http://aula.ieslosmontecillos.es/course/view.php?id=4
 > hacer los primeros 3 ejercicios de T1A1 en Horas de Libre Configuracion
 > sincronizar los workspaces de codeblocks
 > leer el punto 3 del tema introductorio de DI
-> descargar Trello
+> leer lasprimeras 40 pag de base de datos porque me estoy muriendo de sueño ayuda aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
