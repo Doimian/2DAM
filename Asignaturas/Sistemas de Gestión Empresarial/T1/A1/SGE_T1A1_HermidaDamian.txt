@@ -15,4 +15,100 @@ gestiona funciones empresariales diferentes
 	b) Falso
 
 Verdadero, los sistemas ERP suelen ser programas modulares en los que cada módulo se encarga de administrar una función diferente, por ejemplo los pedidos,
- la logística, el almacen, etc. Esto también facilita la personalización de un sistema ERP para una empresa particular.
+ la logística, el almacen, etc. Esto también facilita la personalización de un sistema ERP para una empresa particular o cambiar una sola función del sistema.
+
+
+3. La modularidad de un sistema ERP consiste en:
+	a) Integrar todos los procesos de la empresa para ahorrar tiempo y costes.
+	b) Adaptar mediante una solución genérica la aplicación a las necesidades de la empresa.
+	c) Integrar sólo algunos procesos, solo los que nos hacen ahorrar tiempo.
+   - >	d) Hacer corresponder cada área funcional de la empresa con un módulo ERP, utilizando cada uno de ellos un software específico.
+
+La modularidad en un sistema ERP hace lo que dice la opción D, y todos los módulos, aunque utilicen softwares específicos y diferentes, comparten información mediante conextiones y bases de datos centralizadas.
+
+
+4. Una de las principales ventajas del uso de los ERP es que minimizan costes empresariales, en especial los relacionados con las tecnologías de la información.
+   - >	a) Verdadero
+	b) Falso
+
+Verdadero, los módulos de los ERP sincronizan información entre diferentes sectores de la empresa, entre los trabajadores e incluso entre diferentes grupos y rangos de trabajadores en una empresa en diferentes sucursales, 
+por lo que una empresa sin un sistema ERP no puede competir en rapidez y cantidad de la información con una empresa que tenga un sistema ERP mínimamente funcional.
+
+
+5. Los sistemas de CRM bajo demanda o software en línea se caracterizan por:
+	a) Disminuir los costes en los clientes.
+   - >	b) Aumenta la eficacia y la eficiencia en la comunicación.
+	c) Mejora el soporte técnico y las tareas de mantenimiento.
+	d) Las aplicaciones software del cliente operan enteramente dentro de un explorador de Internet.
+
+Los sistemas CRM surgieron para mejorar la comunicación entre una empresa y sus clientes, de ahí las siglas Customes Relationship Manager; por eso la respuesta es la B.
+
+
+6. Gracias a que todos los sistemas que integran CRM tienen su propia base de datos independiente,
+el sistema puede tomar información de cada una de las áreas para su toma de decisiones.
+   - >	a) Verdadero
+	b) Falso
+
+Verdadero, los CRM tienen bases de datos centradas en las relaciones con los clientes, lo que les ayuda al circulo directivo de una empresa a la hora de tomar decisiones dirigidas hacia los clientes.
+
+
+7. El análisis previo a la adquisición e implementación de un sistema ERP-CRM es sumamente importante para definir los objetivos que se quieren conseguir.
+   - >	a) Verdadero
+	b) Falso
+
+Por supuesto que es importante, ya que ese análisis es el que va a definir qué cantidad de dinero se puede invertir en un sistema ERP-CRM, en qué módulos se quiere invertir, qué software externo va a ser necesario y hacia dónde estará orientado.
+
+
+8. El módulo de CRM de un Sistema ERP permite:
+	a) Realizar una gestión de recursos humanos.
+	b) Gestionar los procesos financieros y contables de una empresa.
+	c) Gestionar la manufactura, compras y gestión de inventario.
+   - >	d) Averiguar a una empresa los servicios y productos que requieren sus clientes para poder proveerlos, optimizando y mejorando las estrategias en los canales de entrega.
+
+La cuarta opción es la acertada, lo que cambia con el tiempo son las formas y la tecnología con la que las empresas se relacionan con los clientes, desde centros de telefonía hasta cookies en las páginas web.
+
+
+9. El PLM es una extensión al sistema ERP que intenta controlar la cadena de suministro de una
+empresa.
+   - >	a) Verdadero
+	b) Falso
+
+Verdadero, el PLM (Product Lifecycle Management) es la extensión del sistema ERP que consiste en gestionar los productos de una empresa, desde el concepto de un producto hasta que sale al mercado, y luego controlar su evolución y modificaciones.
+
+
+10. Microsoft después de la versión 2000 evolucionó y se convirtió en software libre.
+	a) Verdadero
+   - >	b) Falso
+
+Falso, Microsoft evolucionó despues de la versión 2000 y eso lo puso al frente de la competencia, pero siempre ha sido software privado.
+
+11. La correcta integración de una base de datos nos permite distribuir de forma estandarizada la
+información introducida por todo el sistema.
+   - >	a) Verdadero
+	b) Falso
+
+Esto es correcto debido a que si la base de datos está bien integrada con introducir x datos una sola vez en la base de datos, éstos datos se distribuye por todo el sistema, lo que agiliza increiblemente la difusión de información.
+
+12. En la configuración de una plataforma para la instalación de un sistema ERP es imprescindible:
+	a) Disponer de conexión a internet.
+   - >	b) Instalar nuestra base de datos y conectarla con nuestro ERP.
+	c) Disponer de un ordenador portátil.
+	d) Configurar los clientes para acceder al servidor.
+
+Aunque normalmente todas las opciones se cumplen, la más imprescindible (a no ser que haya módulos del sistema que necesiten conexión a internet como Salesforce) es tener una base de datos configurada y conectada, ya que es probablemente la pieza más importante de todo el sistema.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

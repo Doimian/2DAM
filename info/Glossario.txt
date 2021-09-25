@@ -1,3 +1,5 @@
 MVC (Modelo Vista Controlador): Modelo que tiene como objetivo modularizar las aplicaciones para distribuir los datos)
 
 Firma: El conjunto de todos los diferentes constructores para un mismo método
+
+SDBC: Java Database Connector
