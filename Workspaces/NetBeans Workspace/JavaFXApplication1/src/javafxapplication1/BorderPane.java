@@ -1,16 +1,16 @@
 package javafxapplication1;
 
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class JavaFXApplication1 extends Application {
+public class BorderPane extends Application {
     
     @Override
     public void init()
@@ -41,8 +41,8 @@ public class JavaFXApplication1 extends Application {
         btn.setText("Say 'Hello World'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
-            @Override
-            public void handle(ActionEvent event) {
+        @Override
+        public void handle(ActionEvent event) {
                 System.out.println("Hello World!");
                 showStage2(scene);
             }
