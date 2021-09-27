@@ -1,7 +1,8 @@
-package javafxhbox;
+package javafxfancyforms;
 
 import javafx.geometry.Insets;
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
@@ -18,7 +19,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class JavaFXHBox extends Application {
+public class JavaFXFancyForms extends Application {
     
     
     
