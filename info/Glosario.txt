@@ -3,3 +3,7 @@ MVC (Modelo Vista Controlador): Modelo que tiene como objetivo modularizar las a
 Firma: El conjunto de todos los diferentes constructores para un mismo método
 
 SDBC: Java Database Connector
+
+ERP: Enterprice Recourse Planning 
+
+CRM: Client Relationship Management 
