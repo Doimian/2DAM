@@ -34,7 +34,10 @@ public class JavaFXFancyForms extends Application {
         grid.setPadding(new Insets(25, 25, 25, 25));
 
         Scene scene = new Scene(grid, 300, 275);
-        
+        primaryStage.setScene(scene);
+        scene.getStylesheets().add(JavaFXFancyForms.class.getResource("/resources/stylesheet/CascadeStyleSheet.css").toExternalForm());
+        primaryStage.show();
+
         Button btn = new Button("Sign in");
         HBox hbBtn = new HBox(10);
         hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
@@ -43,21 +46,19 @@ public class JavaFXFancyForms extends Application {
         
         final Text actiontarget = new Text();
         grid.add(actiontarget, 1, 6);
+        actiontarget.setId("actiontarget");
 
         btn.setOnAction(new EventHandler<ActionEvent>() {
  
         @Override
         public void handle(ActionEvent e) {
-            actiontarget.setFill(Color.FIREBRICK);
             actiontarget.setText("Sign in button pressed");
         }
         });
 
-        
-        primaryStage.setScene(scene);
-        
+
         Text scenetitle = new Text("Welcome");
-        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+        scenetitle.setId("welcome-text");
         grid.add(scenetitle, 0, 0, 2, 1);
 
         Label userName = new Label("User Name:");
