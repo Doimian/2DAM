@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1632830409 source:c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\proyecto 1\prueba\main.cpp
+	<iostream>
+	"hola.h"
+
+1632830736 source:c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\proyecto 1\prueba\src\hola.cpp
+	"hola.h"
+	<iostream>
+
+1632830684 c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\proyecto 1\prueba\include\hola.h
+	<iostream>
+

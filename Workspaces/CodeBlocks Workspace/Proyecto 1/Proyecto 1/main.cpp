@@ -7,10 +7,12 @@ void suma(double n, double m, double &s);
 void areayperimetro(double base, double altura, double &a, double &p);
 void operacionFactorial(int num, int &res);
 bool operaciones(double a, double b, double &suma, double &resta, double &multi, double &divi);
-
+void isPar(int n);
+void isPrimo(int n);
 int main()
 {
     double valor1, valor2, resultado, area, perimetro;
+    double suma, resta, multi, divi;
     int factorial, facres;
     cout << "Actividad 1.1: suma" << endl;
     cout << "Numero 1 : ";
@@ -35,10 +37,70 @@ int main()
     operacionFactorial(factorial, facres);
     cout << "Factorial de " << factorial << " = " << facres << endl;
 
+    cout << "Actividad 1.4: comprobar si un numero es par" << endl;
+    cout << "Numero: ";
+    cin >> valor1;
+    isPar(valor1);
 
+    cout << "Actividad 1.5: comprobar si un numero es primo" << endl;
+    cout << "Numero: ";
+    cin >> valor1;
+    isPrimo(valor1);
 
+    cout << "Actividad 1.6: hacer la suma, resta, multiplicación y división de dos números indicando si hay un error" << endl;
+    cout << "Numero 1: ";
+    cin >> valor1;
+    cout << "Numero 2: ";
+    cin >> valor2;
+    bool comprobacion = operaciones(valor1, valor2, suma, resta, multi, divi);
+    if (comprobacion == true)
+    {
+        cout << "La suma de " << valor1 << " y " << valor2 << " = " << suma;
+    }
 
     return 0;
+}
+
+bool operaciones(double a, double b, double &suma, double &resta, double &multi, double &divi)
+{
+    if(a != 0 && b != 0)
+    {
+        suma = a + b;
+        resta = a - b;
+        multi = a * b;
+        divi = a / b;
+        return true;
+    }
+    suma = a + b;
+    resta = a - b;
+    multi = 0;
+    divi = -1;
+    return false;
+}
+
+void isPrimo(int n)
+{
+    bool esPrimo = true;
+    if(n < 3)
+        esPrimo = false;
+
+    for(int i = 2; i < n; i++)
+    {
+        if(n % i == 0)
+            esPrimo = false;
+    }
+    if(esPrimo == true)
+        cout << "El numero " << n << " es primo" << endl;
+    else
+        cout << "El numero " << n << " no es primo" << endl;
+}
+
+void isPar(int n)
+{
+    if(n % 2 == 0)
+        cout << "El numero " << n << " es par" << endl;
+    else
+        cout << "El numero " << n << " es impar" << endl;
 }
 
 void suma(double n, double m, double &s)
