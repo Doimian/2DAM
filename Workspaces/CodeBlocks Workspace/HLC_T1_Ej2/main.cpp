@@ -3,12 +3,13 @@
 using namespace std;
 
 // Prototipos
-void suma(double n, double m, double &s);
-void areayperimetro(double base, double altura, double &a, double &p);
-void operacionFactorial(int num, int &res);
+double suma(double n, double m);
+double areaRec(double base, double altura);
+double perimetroRec(double base, double altura);
+int operacionFactorial(int num);
 bool operaciones(double a, double b, double &suma, double &resta, double &multi, double &divi);
-void isPar(int n, bool &r);
-void isPrimo(int n, bool &r);
+bool isPar(int n);
+bool isPrimo(int n);
 
 int main()
 {
@@ -19,49 +20,50 @@ int main()
     cout << "Actividad 1.1: suma" << endl;
     cout << "Numero 1 : ";
     cin >> valor1;
-    cout << "Numero 2 : ";
-    cin >> valor2;
-    suma(valor1, valor2, resultado);
+    cout << "Numero 2 : 0" << endl;
+    valor2 = 0;
+    resultado = suma(valor1, valor2);
     cout << "Suma con retorno : " << resultado << endl << endl;
 
     cout << "Actividad 1.2: area y perimetro de un rectangulo" << endl;
-    cout << "Base: ";
-    cin >> valor1;
+    cout << "Base: 10" << endl;
+    valor1 = 10;
     cout << "Altura: ";
     cin >> valor2;
-    areayperimetro(valor1, valor2, area, perimetro);
+    area = areaRec(valor1, valor2);
+    perimetro = perimetroRec(valor1, valor2);
     cout << "Area del rectangulo: " << area << endl;
     cout << "Perimetro del rectangulo " << perimetro << endl << endl;
 
     cout << "Actividad 1.3: factorial de un numero" << endl;
-    cout << "Numero: ";
-    cin >> factorial;
-    operacionFactorial(factorial, facres);
+    cout << "Numero: 5" << endl;
+    factorial = 5;
+    facres = operacionFactorial(factorial);
     cout << "Factorial de " << factorial << " = " << facres << endl << endl;
 
     cout << "Actividad 1.4: comprobar si un numero es par" << endl;
-    cout << "Numero: ";
-    cin >> valor1;
-    isPar(valor1, res);
+    cout << "Numero: 2" << endl;
+    valor1 = 2;
+    res = isPar(valor1);
     if(res == true)
         cout << "El numero " << valor1 << " es par" << endl << endl;
     else if(res == false)
         cout << "El numero " << valor1 << " es impar" << endl << endl;
 
     cout << "Actividad 1.5: comprobar si un numero es primo" << endl;
-    cout << "Numero: ";
-    cin >> valor1;
-    isPrimo(valor1, res);
+    cout << "Numero: 7" << endl;
+    valor1 = 7;
+    res = isPrimo(valor1);
     if(res == true)
         cout << "El numero " << valor1 << " es primo" << endl << endl;
     else if(res == false)
         cout << "El numero " << valor1 << " no es primo" << endl << endl;
 
     cout << "Actividad 1.6: hacer la suma, resta, multiplicación y división de dos numeros indicando si hay un error" << endl;
-    cout << "Numero 1: ";
-    cin >> valor1;
-    cout << "Numero 2: ";
-    cin >> valor2;
+    cout << "Numero 1: 1" << endl;
+    valor1 = 1;
+    cout << "Numero 2: 1" << endl;
+    valor2 = 1;
     bool comprobacion = operaciones(valor1, valor2, sumaa, resta, multi, divi);
     if (comprobacion == true)
     {
@@ -98,43 +100,47 @@ bool operaciones(double a, double b, double &suma, double &resta, double &multi,
     return false;
 }
 
-void isPrimo(int n, bool &r)
+bool isPrimo(int n)
 {
-    r = true;
+    if(n == 1)
+        return(true);
     if(n > 1 && n < 3)
-        r = false;
+        return(false);
     for(int i = 2; i < n; i++)
     {
         if(n % i == 0)
-            r = false;
+            return(false);
     }
 }
 
-void isPar(int n, bool &r)
+bool isPar(int n)
 {
     if(n % 2 == 0)
-        r = true;
+        return(true);
     else
-        r = false;
+        return(false);
 }
 
-void suma(double n, double m, double &s)
+double suma(double n, double m)
 {
-    s = n + m;
+    return(n + m);
 }
 
-void areayperimetro(double b, double a, double &ar, double &per)
+double areaRec(double b, double a)
 {
-    ar = b * a;
-    per = (2 * b) + (2 * a);
+    return (b * a);
+}
+double perimetroRec(double b, double a)
+{
+    return ((2 * b) + (2 * a));
 }
 
-void operacionFactorial(int num, int &res)
+int operacionFactorial(int num)
 {
     int a = 1;
     for(int i = 1; i <= num; i++)
     {
         a *= i;
     }
-    res = a;
+     return a;
 }
