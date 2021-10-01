@@ -11,7 +11,7 @@ public class Ejercicio4 {
 	private static String usuario;
 	private static String clave;
 	private static Conexion crearConexion;
-	private static Connection conexion;
+	private static Statement statement;
 	private static Scanner sc;
 	
 	public static void main(String[] args) 
@@ -32,7 +32,7 @@ public class Ejercicio4 {
 		clave = sc.nextLine();
 		
 		try {
-			conexion = crearConexion.getConexion(SGBD, database, usuario, clave);
+			statement = crearConexion.getConexion(SGBD, database, usuario, clave);
 			System.out.println("Conexion exitosa con la base de datos");
 		} catch (SQLException e) {
 			System.out.println("No se ha podido acceder a la base de datos");
@@ -41,6 +41,13 @@ public class Ejercicio4 {
 		
 		//Menu
 		Menu();
+		
+		crearConexion.closeConexion();
+		try {
+			statement.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public static void Menu()
@@ -60,26 +67,46 @@ public class Ejercicio4 {
 			switch(contador)
 			{
 				case 1:
-					insertarAlumno();
+					try {
+						insertarAlumno(statement);
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
 					break;
 				case 2:
-					insertarCurso();
+					try {
+						insertarCurso(statement);
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
 					break;
 				case 3:
-					insertarMatricula();
+					try {
+						insertarMatricula(statement);
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
 					break;
 				case 4:
-					mostrarAlumnos();
+					try {
+						mostrarAlumnos(statement);
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
 					break;
 				case 5:
 					try {
-						mostrarCursos();
+						mostrarCursos(statement);
 					} catch (SQLException e) {
 						e.printStackTrace();
-}
+					}
 					break;
 				case 6:
-					mostrarAsignaturas();
+					try {
+						mostrarMatriculas(statement);
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
 					break;
 				case 7:
 					System.out.println("Bye...");
@@ -88,15 +115,27 @@ public class Ejercicio4 {
 		}
 	}
 
-	private static void mostrarAsignaturas() 
+	private static void mostrarMatriculas(Statement statement)  throws SQLException
 	{
-		System.out.println("");
+		System.out.println("Mostrar Asignaturas de la base de datos:");
+
+        ResultSet resul = statement.executeQuery("select alumno.nombre, curso.nombre from curso join matricula on (matricula.cod_curso = curso.cod_curso) join alumno on (alumno.cod_alumno = matricula.cod_alumno);");
+        System.out.println("Alumno    Asignatura");
+        //Recorremos el resultado
+        while(resul.next())
+        {
+            System.out.println(resul.getString(1) + "   " + resul.getString(2));
+            
+        }
+        System.out.println("\n\n");
+        resul.close();
 	}
 
-	private static void mostrarCursos() throws SQLException 
+	private static void mostrarCursos(Statement statement) throws SQLException 
 	{
-		Statement sentencia = conexion.createStatement();
-        ResultSet resul = sentencia.executeQuery("select * from curso;");
+		System.out.println("Mostrar Cursos de la base de datos:");
+
+        ResultSet resul = statement.executeQuery("select * from curso;");
         System.out.println("cod_curso   nombre   horas   turno   mes_comienzo");
         //Recorremos el resultado
         while(resul.next())
@@ -108,28 +147,89 @@ public class Ejercicio4 {
         resul.close();
 	}
 
-	private static void mostrarAlumnos() 
+	private static void mostrarAlumnos(Statement statement) throws SQLException
 	{
+		System.out.println("Mostrar Cursos de la base de datos:");
 
-
+        ResultSet resul = statement.executeQuery("select * from alumno;");
+        System.out.println("cod_alumno   DNI   nombre   apellidos   direccion   localidad   f_nac   tfno");
+        //Recorremos el resultado
+        while(resul.next())
+        {
+            System.out.println(resul.getInt(1) + " " + resul.getString(2) + " " + resul.getString(3) + " " + resul.getString(4) + " " + resul.getString(5) + " " + resul.getString(6) + " " + resul.getString(7) + " " + resul.getString(8));
+            
+        }
+        System.out.println("\n\n");
+        resul.close();
 	}
 
-	private static void insertarMatricula() 
+	private static void insertarMatricula(Statement statement) throws SQLException 
 	{
+		int cod_curso, cod_alumno;
+		String fecha_mat, calificacion;
+		Scanner sc2 = new Scanner(System.in);
+		System.out.println("Vas a añadir una matricula a la base de datos:");
+		System.out.println("Codigo del alumno matriculado: ");
+		cod_alumno = sc2.nextInt();
+		System.out.println("Codigo del curso al que se matricula: ");
+		cod_curso = sc2.nextInt();
+		System.out.println("Fecha de matriculación (formato anno/mes/dia): ");
+		fecha_mat = sc2.nextLine();
+		System.out.println("Calificación del alumno (Apto / No apto): ");
+		calificacion = sc2.nextLine();
 
-		
+		String sql = "insert into matricula values ("+cod_curso+",'"+cod_alumno+"','"+fecha_mat+"','"+calificacion+"');";
+		statement.executeUpdate(sql);
+		sc2.close();
 	}
 
-	private static void insertarCurso() 
+	private static void insertarCurso(Statement statement) throws SQLException 
 	{
-		
-		
+		int cod_curso, horas;
+		String nombre, turno, mes_comienzo;
+		Scanner sc2 = new Scanner(System.in);
+		System.out.println("Vas a añadir un curso a la base de datos:");
+		System.out.println("Codigo del curso: ");
+		cod_curso = sc2.nextInt();
+		System.out.println("nombre del curso: ");
+		nombre = sc2.nextLine();
+		System.out.println("horas del curso: ");
+		horas = sc2.nextInt();
+		System.out.println("turno del curso (maniana / tarde): ");
+		turno = sc2.nextLine();
+		System.out.println("mes de comienzo del curso (escrito, no numerico): ");
+		mes_comienzo = sc2.nextLine();
+		String sql = "insert into curso values ("+cod_curso+",'"+nombre+"',"+horas+",'"+turno+"','"+mes_comienzo+"');";
+		statement.executeUpdate(sql);
+		sc2.close();
 	}
 
-	private static void insertarAlumno() 
+	private static void insertarAlumno(Statement statement) throws SQLException
 	{
-		
-		
+		int cod_alumno;
+		String DNI, nombre, apellidos, direccion, localidad, f_nac, tfno, limpiacarro;
+		Scanner sc2 = new Scanner(System.in);
+		System.out.println("Vas a añadir un alumno a la base de datos:");
+		System.out.println("Codigo del alumno: ");
+		cod_alumno = sc2.nextInt();
+		limpiacarro = sc2.nextLine();
+		System.out.println("DNI del alumno: ");
+		DNI = sc2.nextLine();
+		System.out.println("nombre del alumno: ");
+		nombre = sc2.nextLine();
+		System.out.println("apellidos del alumno: ");
+		apellidos = sc2.nextLine();
+		System.out.println("direccion del alumno: ");
+		direccion = sc2.nextLine();
+		System.out.println("localidad del alumno: ");
+		localidad = sc2.nextLine();
+		System.out.println("fecha de nacimiento del alumno (con formato anno/mes/dia): ");
+		f_nac = sc2.nextLine();
+		System.out.println("telefono del alumno: ");
+		tfno = sc2.nextLine();
+		String sql = "insert into alumno values ("+cod_alumno+",'"+DNI+"','"+nombre+"','"+apellidos+"','"+direccion+"','"+localidad+"','"+f_nac+"','"+tfno+"');";
+		statement.executeUpdate(sql);
+		sc2.close();
 	}
 	
 }
