@@ -8,6 +8,7 @@ package di_t1a2.pkg2;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
@@ -23,6 +24,7 @@ public class DI_T1A22 extends Application {
     Button btn2 = new Button();
     Button btn3 = new Button();
     Button btn4 = new Button();
+    Insets margen = new Insets(10, 10, 10, 10);
     
     @Override
     public void start(Stage primaryStage) {
@@ -60,8 +62,13 @@ public class DI_T1A22 extends Application {
                 System.out.println("Imprimir Proceso");
             }
         });
+        
         HBox botones = new HBox();
         botones.getChildren().addAll(btn, btn2, btn3, btn4);
+        botones.setMargin(btn, margen);
+        botones.setMargin(btn2, margen);
+        botones.setMargin(btn3, margen);
+        botones.setMargin(btn4, margen);
         StackPane root = new StackPane();
         root.getChildren().add(botones);
         

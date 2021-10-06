@@ -5,6 +5,8 @@
  */
 package di_t1a2.pkg3;
 
+import static java.lang.Double.parseDouble;
+import java.text.DecimalFormat;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -42,31 +44,29 @@ public class DI_T1A23 extends Application {
         texto4.setText("Monthly Payment:");
         texto5.setText("Total Payment:");
         
-        Insets button = new Insets(0, 0, 0, 80.00);
         Insets matrizPad = new Insets(2, 2, 2, 2);
-        
+        Insets boton = new Insets(20, 20, 20, 20);
         GridPane matriz = new GridPane();
-        
+        matriz.setHgap(10);
+        matriz.setVgap(10);
         matriz.addColumn(0, texto1, texto2, texto3, texto4, texto5);
         matriz.addColumn(1, tf1, tf2, tf3, tf4, tf5);
         
         Button btn = new Button();
+        
         btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
+        btn.setOnAction(new ManejadorEventos());
         
         BorderPane root = new BorderPane();
         root.setCenter(matriz);
+        //root.setBottom(boton);
         matriz.setAlignment(Pos.CENTER);
-        matriz.setPadding(matrizPad);
-        btn.setPadding(button);
-        root.setBottom(btn);
         
+        matriz.setPadding(matrizPad);
+        
+        root.setBottom(btn);
+        root.setAlignment(btn, Pos.CENTER_RIGHT);
+        root.setMargin(btn, boton);
         
         Scene scene = new Scene(root, 300, 250);
         
@@ -81,5 +81,28 @@ public class DI_T1A23 extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+    class ManejadorEventos implements EventHandler<ActionEvent>
+    {
+        @Override
+        public void handle(ActionEvent event) {
+            double m;
+            double h  = parseDouble(tf3.getCharacters().toString());
+            double n  = parseDouble(tf2.getCharacters().toString());
+            double i  = parseDouble(tf1.getCharacters().toString());
+            double r = i/(100*12);
+            double 
+            double total;
+            m = h*r/Math.pow(1-(1+r),(-12*n));
+            DecimalFormat df = new DecimalFormat("#.##");
+            
+            m = 2.34543;
+            total = m * (n*12);
+            
+            String mf = df.format(m) + "€";
+            String ff = df.format(total) + "€";
+            tf4.setText(mf);
+            tf5.setText(ff);
+        }
+        
+    }
 }
