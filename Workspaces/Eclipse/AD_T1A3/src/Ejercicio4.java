@@ -1,4 +1,4 @@
-import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -12,14 +12,22 @@ public class Ejercicio4 {
 	private static String clave;
 	private static Conexion crearConexion;
 	private static Statement statement;
+	private static PreparedStatement stat;
 	private static Scanner sc;
 	
 	public static void main(String[] args) 
 	{
+		boolean error = false;
 		//Cargar el Driver
 		sc = new Scanner(System.in);
 		System.out.println("Indica el SGBD al que te quieres conectar: ");
 		SGBD = sc.nextLine();
+		if(!SGBD.equals("mysql"))
+		{
+			System.out.println("Por ahora este programa solo soporta mysql");
+			return;
+		}
+			
 		
 		crearConexion = new Conexion(SGBD);
 		
@@ -34,13 +42,19 @@ public class Ejercicio4 {
 		try {
 			statement = crearConexion.getConexion(SGBD, database, usuario, clave);
 			System.out.println("Conexion exitosa con la base de datos");
+			 error = true;
 		} catch (SQLException e) {
 			System.out.println("No se ha podido acceder a la base de datos");
 			e.printStackTrace();
+			
 		}
 		
 		//Menu
-		Menu();
+		if(error == true)
+		{
+			Menu();
+		}
+		
 		
 		crearConexion.closeConexion();
 		try {
@@ -53,6 +67,7 @@ public class Ejercicio4 {
 	public static void Menu()
 	{
 		int contador = 0;
+		String limpiacarro;
 		while(contador != 7)
 		{
 			System.out.println("\nMenu de la aplicacion:");
@@ -64,6 +79,7 @@ public class Ejercicio4 {
 			System.out.println("6. Mostrar todas las asignaturas");
 			System.out.println("7. Salir de la aplicacion");
 			contador = sc.nextInt();
+			limpiacarro = sc.nextLine();
 			switch(contador)
 			{
 				case 1:
@@ -153,6 +169,7 @@ public class Ejercicio4 {
 
         ResultSet resul = statement.executeQuery("select * from alumno;");
         System.out.println("cod_alumno   DNI   nombre   apellidos   direccion   localidad   f_nac   tfno");
+
         //Recorremos el resultado
         while(resul.next())
         {
@@ -165,47 +182,65 @@ public class Ejercicio4 {
 
 	private static void insertarMatricula(Statement statement) throws SQLException 
 	{
+		String sql = "insert into matricula values(?,?,?,?)";
+		stat = crearConexion.getPSConexion(SGBD, database, usuario, clave, sql);
 		int cod_curso, cod_alumno;
-		String fecha_mat, calificacion;
+		String fecha_mat, calificacion, limpiacarro;
 		Scanner sc2 = new Scanner(System.in);
 		System.out.println("Vas a añadir una matricula a la base de datos:");
 		System.out.println("Codigo del alumno matriculado: ");
 		cod_alumno = sc2.nextInt();
+		limpiacarro = sc2.nextLine();
 		System.out.println("Codigo del curso al que se matricula: ");
 		cod_curso = sc2.nextInt();
+		limpiacarro = sc2.nextLine();
 		System.out.println("Fecha de matriculación (formato anno/mes/dia): ");
 		fecha_mat = sc2.nextLine();
 		System.out.println("Calificación del alumno (Apto / No apto): ");
 		calificacion = sc2.nextLine();
-
-		String sql = "insert into matricula values ("+cod_curso+",'"+cod_alumno+"','"+fecha_mat+"','"+calificacion+"');";
-		statement.executeUpdate(sql);
+		stat.setInt(1, cod_curso);
+		stat.setInt(2, cod_alumno);
+		stat.setString(3, fecha_mat);
+		stat.setString(4, calificacion);
+		stat.executeUpdate();
+		stat.close();
 		sc2.close();
 	}
 
 	private static void insertarCurso(Statement statement) throws SQLException 
 	{
+		String sql = "insert into curso values(?,?,?,?,?)";
+		stat = crearConexion.getPSConexion(SGBD, database, usuario, clave, sql);
 		int cod_curso, horas;
-		String nombre, turno, mes_comienzo;
+		String nombre, turno, mes_comienzo, limpiacarro;
 		Scanner sc2 = new Scanner(System.in);
 		System.out.println("Vas a añadir un curso a la base de datos:");
 		System.out.println("Codigo del curso: ");
 		cod_curso = sc2.nextInt();
+		limpiacarro = sc2.nextLine();
 		System.out.println("nombre del curso: ");
 		nombre = sc2.nextLine();
 		System.out.println("horas del curso: ");
 		horas = sc2.nextInt();
+		limpiacarro = sc2.nextLine();
 		System.out.println("turno del curso (maniana / tarde): ");
 		turno = sc2.nextLine();
 		System.out.println("mes de comienzo del curso (escrito, no numerico): ");
 		mes_comienzo = sc2.nextLine();
-		String sql = "insert into curso values ("+cod_curso+",'"+nombre+"',"+horas+",'"+turno+"','"+mes_comienzo+"');";
-		statement.executeUpdate(sql);
+		stat.setInt(1, cod_curso);
+		stat.setString(2, nombre);
+		stat.setInt(3, horas);
+		stat.setString(4, turno);
+		stat.setString(5, mes_comienzo);
+		stat.executeUpdate();
+		stat.close();
 		sc2.close();
 	}
 
 	private static void insertarAlumno(Statement statement) throws SQLException
 	{
+		String sql = "insert into alumno values(?,?,?,?,?,?,?,?)";
+		stat = crearConexion.getPSConexion(SGBD, database, usuario, clave, sql);
 		int cod_alumno;
 		String DNI, nombre, apellidos, direccion, localidad, f_nac, tfno, limpiacarro;
 		Scanner sc2 = new Scanner(System.in);
@@ -227,9 +262,16 @@ public class Ejercicio4 {
 		f_nac = sc2.nextLine();
 		System.out.println("telefono del alumno: ");
 		tfno = sc2.nextLine();
-		String sql = "insert into alumno values ("+cod_alumno+",'"+DNI+"','"+nombre+"','"+apellidos+"','"+direccion+"','"+localidad+"','"+f_nac+"','"+tfno+"');";
-		statement.executeUpdate(sql);
+		stat.setInt(1,cod_alumno);
+		stat.setString(2, DNI);
+		stat.setString(3, nombre);
+		stat.setString(4, apellidos);
+		stat.setString(5, direccion);
+		stat.setString(6, localidad);
+		stat.setString(7, f_nac);
+		stat.setString(8, tfno);
+		stat.executeUpdate();
+		stat.close();
 		sc2.close();
 	}
-	
 }

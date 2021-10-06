@@ -55,7 +55,30 @@ public class DI_T1A23 extends Application {
         Button btn = new Button();
         
         btn.setText("Say 'Hello World'");
-        btn.setOnAction(new ManejadorEventos());
+        btn.setOnAction(e -> {
+            
+            double m;
+            double h  = parseDouble(tf3.getCharacters().toString());
+            double n  = parseDouble(tf2.getCharacters().toString());
+            double i  = parseDouble(tf1.getCharacters().toString());
+            double r = i/(100*12);
+            
+            double den = 1-(Math.pow((1+r),(-12*n)));
+            double num = h*r;
+            double fin = num/den;
+            //double 
+            double total;
+            m = h*r/Math.pow(1-(1+r),(-12*n));
+            DecimalFormat df = new DecimalFormat("#.## €");
+            
+            m = 2.34543;
+            total = fin *12 * n;
+            
+            String mf = df.format(fin);
+            String ff = df.format(total);
+            tf4.setText(mf);
+            tf5.setText(ff);
+        });
         
         BorderPane root = new BorderPane();
         root.setCenter(matriz);
@@ -81,28 +104,5 @@ public class DI_T1A23 extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    class ManejadorEventos implements EventHandler<ActionEvent>
-    {
-        @Override
-        public void handle(ActionEvent event) {
-            double m;
-            double h  = parseDouble(tf3.getCharacters().toString());
-            double n  = parseDouble(tf2.getCharacters().toString());
-            double i  = parseDouble(tf1.getCharacters().toString());
-            double r = i/(100*12);
-            double 
-            double total;
-            m = h*r/Math.pow(1-(1+r),(-12*n));
-            DecimalFormat df = new DecimalFormat("#.##");
-            
-            m = 2.34543;
-            total = m * (n*12);
-            
-            String mf = df.format(m) + "€";
-            String ff = df.format(total) + "€";
-            tf4.setText(mf);
-            tf5.setText(ff);
-        }
-        
-    }
+
 }
