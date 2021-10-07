@@ -89,7 +89,9 @@ public class Par extends Frame implements ActionListener, WindowListener
 		System.out.println("Pulsado");
 		int numero = Integer.parseInt(textInput.getText());
 		
-		if(esPar(numero))
+		if(textInput.getText().equals(""))
+			lbTexto2.setText("Vacio");
+		else if(esPar(numero))
 			lbTexto2.setText("Par");
 		else 
 			lbTexto2.setText("Impar");

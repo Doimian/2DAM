@@ -8,7 +8,6 @@ public class Par
 {
 	public static void main(String[] args)
 	{
-		//instancia la ventana
 		MainWindow window = new MainWindow();
 	}
 }

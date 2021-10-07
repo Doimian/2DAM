@@ -77,8 +77,7 @@ public class MainWindow extends Frame implements WindowListener
 	}
 	
 	
-	@Override
-	public void windowOpened(WindowEvent e) {}
+
 
 	@Override
 	public void windowClosing(WindowEvent e) 
@@ -101,6 +100,9 @@ public class MainWindow extends Frame implements WindowListener
 
 	@Override
 	public void windowDeactivated(WindowEvent e) {}
+
+	@Override
+	public void windowOpened(WindowEvent e) {}
 	
 
 }

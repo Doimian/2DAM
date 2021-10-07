@@ -1,8 +1,7 @@
 import java.sql.*;
 public class Conexion 
 {
-	private Connection conexion;
-	private Statement sentencia;
+	private static Connection conexion;
 	private PreparedStatement stat;
 	public Conexion(String SGBD)
 	{ 
@@ -16,23 +15,15 @@ public class Conexion
 			System.out.println("No se ha encontrado el Driver");
 		}
 	} 
-	public Statement getConexion(String SGBD, String database, String usuario, String clave) throws SQLException
+	public static Connection getConexion(String SGBD, String database, String usuario, String clave) throws SQLException
 	{
 		
 		String con = "jdbc:" + SGBD + "://localhost/" + database + "?serverTimezone=UTC";
 		conexion=DriverManager.getConnection(con, usuario, clave);
-		sentencia = conexion.createStatement();
-		return sentencia;
+		return conexion;
 	}
-	public PreparedStatement getPSConexion(String SGBD, String database, String usuario, String clave ,String sql) throws SQLException
-	{
-		
-		String con = "jdbc:" + SGBD + "://localhost/" + database + "?serverTimezone=UTC";
-		conexion=DriverManager.getConnection(con, usuario, clave);
-		stat = conexion.prepareStatement(sql);
-		return stat;
-	}
-	public void closeConexion()
+
+	public static void closeConexion()
 	{
 		try {
 			conexion.close();
