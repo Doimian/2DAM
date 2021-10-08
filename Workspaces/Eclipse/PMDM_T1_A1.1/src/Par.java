@@ -11,6 +11,7 @@ public class Par extends Frame implements ActionListener, WindowListener
 	private Label lbTexto1;
 	private Label lbTexto2;
 	private Button btnTest;
+	private Button clear;
 	private TextField textInput;
 	
 	public static void main(String[] args) 
@@ -33,7 +34,7 @@ public class Par extends Frame implements ActionListener, WindowListener
 		this.setLayout(new FlowLayout());
 			
 			//Etiqueta1
-		lbTexto1 = new Label("Numero");
+		lbTexto1 = new Label("Numero: ");
 		this.add(lbTexto1);
 			
 			//Entrada de texto
@@ -43,12 +44,25 @@ public class Par extends Frame implements ActionListener, WindowListener
 			//Boton de comprobacion
 		btnTest = new Button("Comprobar");
 		btnTest.addActionListener(this);
-		add(btnTest);
+		
+			//Boton de limpieza
+		clear = new Button("Clear");
+		clear.addActionListener(new ActionListener()
+				{
+					@Override
+					public void actionPerformed(ActionEvent e) 
+					{
+						lbTexto2.setText("");
+						textInput.setText("");
+					}
+				});
+		
 		
 			//Etiqueta de resultado
-		lbTexto2 = new Label("          ");
+		lbTexto2 = new Label("                     ");
 		add(lbTexto2);
-		
+		add(btnTest);
+		add(clear);
 		
 		// Asigna el listener
 		this.addWindowListener(this);

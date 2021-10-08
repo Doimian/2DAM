@@ -1,7 +1,9 @@
 package src;
 
 import java.sql.Connection;
+import java.sql.DatabaseMetaData;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
@@ -18,6 +20,7 @@ public class Ejercicio5
 	private static PreparedStatement stat;
 	private static Scanner sc;
 	private static Connection conexion;
+	private static DatabaseMetaData metadata;
 	
 	public static void main(String[] args) 
 	{
@@ -51,7 +54,7 @@ public class Ejercicio5
 			
 		}
 		try {
-			statement = conexion.createStatement();
+			metadata = conexion.getMetaData();
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
@@ -59,13 +62,18 @@ public class Ejercicio5
 		//Menu
 		if(error == true)
 		{
-			//Menu();
+			try {
+				Menu();
+			} catch (SQLException e) {
+				//e.printStackTrace();
+				System.out.println("Error en el menu");
+			}
 		}
 		
 		
 		Conexion.closeConexion();
 		try {
-			statement.close();
+			conexion.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -73,7 +81,7 @@ public class Ejercicio5
 	}
 	
 	
-	public static void Menu()
+	public static void Menu() throws SQLException
 	{
 		int contador = 0;
 		String limpiacarro;
@@ -92,13 +100,13 @@ public class Ejercicio5
 			switch(contador)
 			{
 				case 1:
-					mostrarDatosGeneralesSGBD();
+					mostrarDatosGeneralesSGBD(); //done
 					break;
 				case 2:
-					mostrarDatosGeneralesTablas();
+					mostrarDatosGeneralesTablas(); //done
 					break;
 				case 3:
-					mostrarDatosGeneralesTabla();
+					mostrarDatosGeneralesTabla(); //
 					break;
 				case 4:
 					mostrarColumnasTabla();
@@ -119,51 +127,102 @@ public class Ejercicio5
 	}
 
 
-	private static void mostrarProcedimientosAlmacenados() 
+	private static void mostrarProcedimientosAlmacenados() throws SQLException
 	{
 
-		
 	}
 
 
-	private static void mostrarClavesExternas() 
+	private static void mostrarClavesExternas() throws SQLException 
 	{
-
-		
+		ResultSet tableData = metadata.getImportedKeys("academia", null, null);
+		while(tableData.next())
+		{
+			String PKtableName = tableData.getString(3);
+			String FKtableName = tableData.getString(7);
+			String FKcolName = tableData.getString(8);
+			String FKName = tableData.getString(13);
+			System.out.println("Tabla: " + PKtableName + " esta referenciada por la tabla " + FKtableName + " en la columna " + FKcolName + " y el nombre de la clave externa es " + FKName);
+		}
 	}
 
 
-	private static void mostrarClavesPrimarias() 
+	private static void mostrarClavesPrimarias() throws SQLException 
 	{
-
-		
+		ResultSet tableData = metadata.getPrimaryKeys("academia", null, null);
+		while(tableData.next());
+		{
+			String tableName = tableData.getString(3);
+			String tableKeyCol = tableData.getString(4);
+			String tableKeyName = tableData.getString(6);
+			System.out.println("Tabla: " + tableName + ", Columna Primaria: " + tableKeyCol + ", Nombre de la Clave: " + tableKeyName);
+		}
 	}
 
 
-	private static void mostrarColumnasTabla() 
+	private static void mostrarColumnasTabla() throws SQLException 
 	{
-
-		
+		System.out.println("Indica el nombre de la tabla que quieres conocer sus datos:");		
+		String tabla = sc.nextLine();
+		if(tabla.equals("alumno") || tabla.equals("curso")||tabla.equals("matricula"))
+		{
+			ResultSet tableData = metadata.getColumns("academia", null, tabla, null);
+			System.out.println("Datos Generales de la tabla " + tabla + ": ");
+			while(tableData.next())
+			{
+				String tableName = tableData.getString(3);
+				String colName = tableData.getString(4);
+				String dataType = tableData.getString(6);
+				String canNull = tableData.getString(18);
+				System.out.println("Tabla: " + tableName + ", Columna: " + colName + ", Tipo de datos: " + dataType + ", Is_nullable?: " + canNull);
+			}		
+		} else
+			System.out.println("Nombre de tabla incorrecto");
 	}
 
 
-	private static void mostrarDatosGeneralesTabla() 
+	private static void mostrarDatosGeneralesTabla() throws SQLException 
 	{
-
-		
+		System.out.println("Indica el nombre de la tabla que quieres conocer sus datos:");		
+		String tabla = sc.nextLine();
+		if(tabla.equals("alumno") || tabla.equals("curso")||tabla.equals("matricula"))
+		{
+			ResultSet tableData = metadata.getTables("academia", null, tabla, null);
+			while(tableData.next())
+			{
+				String catalog = tableData.getString(1);
+				String table = tableData.getString(3);
+				String type = tableData.getString(4);
+				System.out.println("Base de Datos: " + catalog + ", Nombre: " +  table + ", Tipo: " + type);
+			}			
+		} else
+			System.out.println("Nombre de tabla incorrecto");
 	}
 
 
-	private static void mostrarDatosGeneralesTablas() 
+	private static void mostrarDatosGeneralesTablas() throws SQLException 
 	{
-	
-		
+		ResultSet tablesData = metadata.getTables("academia", null, null, null);
+		while(tablesData.next())
+		{
+			String catalog = tablesData.getString(1);
+			String table = tablesData.getString(3);
+			String type = tablesData.getString(4);
+			System.out.println("Base de Datos: " + catalog + ", Nombre: " +  table + ", Tipo: " + type);
+		}
 	}
 
 
-	private static void mostrarDatosGeneralesSGBD() 
+	private static void mostrarDatosGeneralesSGBD() throws SQLException 
 	{
-	
-		
+		String databaseName = metadata.getDatabaseProductName();
+		String driverName = metadata.getDriverName();
+		String url = metadata.getURL();
+		String userName = metadata.getUserName();
+		System.out.println("Datos Generales del SGBD y la base de datos:");
+		System.out.println("Nombre del SGBD: " + databaseName);
+		System.out.println("Nombre del driver activo en la conexion: " + driverName);
+		System.out.println("URL del SGBD: " + url);
+		System.out.println("Nombre del usuario conectado : " + userName);
 	}
 }
