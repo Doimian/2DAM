@@ -95,6 +95,7 @@ public class Ejercicio5
 			System.out.println("5. Mostrar las claves primarias de una tabla");
 			System.out.println("6. Mostrar las claves externas asociadas a la clave primaria de una tabla");
 			System.out.println("7. Mostrar los procedimientos almacenados a la base de datos conectada");
+			System.out.println("8. Salir de la aplicación");
 			contador = sc.nextInt();
 			limpiacarro = sc.nextLine();
 			switch(contador)
@@ -119,6 +120,7 @@ public class Ejercicio5
 					break;
 				case 7:
 					mostrarProcedimientosAlmacenados();
+					break;
 				case 8:
 					System.out.println("Bye...");
 					return;
@@ -129,13 +131,26 @@ public class Ejercicio5
 
 	private static void mostrarProcedimientosAlmacenados() throws SQLException
 	{
-
+		ResultSet procData = metadata.getProcedures(null , null, null);
+		if(!procData.next())
+			System.out.println("No hay procedimientos almacenados en esta base de datos");
+		while(procData.next())
+		{
+			String cName = procData.getString(1);
+			String pName = procData.getString(3);
+			String pSpecName = procData.getString(9);
+			System.out.println("Catalog name: " + cName + ", Procedure name: " + pName + ", Specific name: " + pSpecName);
+		}
 	}
 
 
 	private static void mostrarClavesExternas() throws SQLException 
 	{
-		ResultSet tableData = metadata.getImportedKeys("academia", null, null);
+		System.out.println("Indica el nombre de la tabla:");
+		String tabla = sc.nextLine();
+		ResultSet tableData = metadata.getImportedKeys(null, null, tabla);
+		if(tabla.equals("alumno") || tabla.equals("curso"))
+			System.out.println("Esta tabla no tiene clave externas");
 		while(tableData.next())
 		{
 			String PKtableName = tableData.getString(3);
@@ -147,16 +162,23 @@ public class Ejercicio5
 	}
 
 
-	private static void mostrarClavesPrimarias() throws SQLException 
+	private static void mostrarClavesPrimarias()  throws SQLException
 	{
-		ResultSet tableData = metadata.getPrimaryKeys("academia", null, null);
-		while(tableData.next());
+		System.out.println("Indica el nombre de la tabla que quieres conocer su clave primaria:");		
+		String tabla = sc.nextLine();
+		if(tabla.equals("alumno") || tabla.equals("curso")||tabla.equals("matricula"))
 		{
-			String tableName = tableData.getString(3);
-			String tableKeyCol = tableData.getString(4);
-			String tableKeyName = tableData.getString(6);
-			System.out.println("Tabla: " + tableName + ", Columna Primaria: " + tableKeyCol + ", Nombre de la Clave: " + tableKeyName);
-		}
+			ResultSet tableData = metadata.getPrimaryKeys("academia", null, tabla);
+			System.out.println("Clave Primaria de la tabla " + tabla + ": ");
+			while(tableData.next())
+			{
+				String tableName = tableData.getString(3);
+				String colName = tableData.getString(4);
+				String pkName = tableData.getString(6);
+				System.out.println("Tabla: " + tableName + ", Columna: " + colName + ", Nombre de la clave: " + pkName);
+			}		
+		} else
+			System.out.println("Nombre de tabla incorrecto");
 	}
 
 
@@ -174,7 +196,7 @@ public class Ejercicio5
 				String colName = tableData.getString(4);
 				String dataType = tableData.getString(6);
 				String canNull = tableData.getString(18);
-				System.out.println("Tabla: " + tableName + ", Columna: " + colName + ", Tipo de datos: " + dataType + ", Is_nullable?: " + canNull);
+				System.out.println("Tabla: " + tableName + ", Columna: " + colName + ", Tipo de datos: " + dataType + ", Acepta NULL?: " + canNull);
 			}		
 		} else
 			System.out.println("Nombre de tabla incorrecto");
@@ -202,6 +224,7 @@ public class Ejercicio5
 
 	private static void mostrarDatosGeneralesTablas() throws SQLException 
 	{
+		System.out.println("Datos de todas las tablas en la base de datos " + database + " :");
 		ResultSet tablesData = metadata.getTables("academia", null, null, null);
 		while(tablesData.next())
 		{
