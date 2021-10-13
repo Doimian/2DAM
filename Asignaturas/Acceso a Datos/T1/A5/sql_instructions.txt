@@ -1,0 +1,23 @@
+DELIMITER //
+create procedure matricula_alumno(IN codAlumno INT, OUT numAsignaturas INT) 
+BEGIN
+	Select count(*) into numAsignaturas from alumno join matricula on (alumno.cod_alumno = matricula.cod_alumno) where matricula.cod_alumno = codAlumno;
+END //
+DELIMITER ; 
+
+DELIMITER //
+create procedure fecha_comienzo(IN codCurso INT, OUT mesComienzo VARCHAR(12)) 
+BEGIN
+	Select mes_comienzo into mesComienzo from curso where cod_curso = codCurso;
+END //
+DELIMITER ; 
+
+DELIMITER //
+create function calificacion(codAlumno INT, codCurso INT)
+RETURNS VARCHAR(20)
+BEGIN
+	DECLARE cal VARCHAR(20) DEFAULT "NO MATRICULADO";
+	select calificacion into cal from alumno  join matricula on (alumno.cod_alumno = matricula.cod_alumno) WHERE alumno.cod_alumno = codAlumno AND cod_curso = codCurso;
+	RETURN cal;
+END //
+DELIMITER ; 

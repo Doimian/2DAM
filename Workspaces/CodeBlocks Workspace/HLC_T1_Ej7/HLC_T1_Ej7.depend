@@ -1,4 +1,11 @@
 # depslib dependency file v1.0
-1584209020 source:c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_t1_ej7\main.cpp
+1633329389 source:c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_t1_ej7\main.cpp
+	<iostream>
+	"Rectangulo.h"
+
+1633329389 c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_t1_ej7\include\rectangulo.h
+
+1633329389 source:c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_t1_ej7\src\rectangulo.cpp
+	"Rectangulo.h"
 	<iostream>
 
