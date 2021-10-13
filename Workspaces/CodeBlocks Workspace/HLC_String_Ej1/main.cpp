@@ -3,21 +3,25 @@
 using namespace std;
 
 string SubCadena(string, int, int);
+
 int main()
 {
-    string s1 = "1234567890";
-    string result;
+    string principal;
+    int lon;
+    int start;
 
-
-
-    cout << s1;
+    cout << "Indica la cadena de caracteres principal: ";
+    getline(cin, principal);
+    cout << "Indica la posicion de inicio de la subcadena:";
+    cin >> start;
+    cout << "Indica la longitud de la subcadena";
+    cin >> lon;
+    cout << "La sub-cadena resultante es " << SubCadena(principal, lon, start);
 
     return 0;
 }
-string SubCadena(string s1, int lon, int start)
+
+string SubCadena(string principal, int lon, int start)
 {
-    char buffer[lon+1];
-
-    buffer.replace(start, lon, s1);
-
+    return principal.substr(start, lon);
 }
