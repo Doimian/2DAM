@@ -8,12 +8,14 @@ import javax.swing.*;
 public class MainWindow extends JFrame 
 {
 	private JButton boton;
-	private BufferedImage image;
-	private JLabel lblimage;
-	public MainWindow() throws MalformedURLException, IOException
+	private JLabel lblLadoA;
+	private JLabel lblLadoB;
+	private JLabel lblLadoC;
+	
+	public MainWindow()
 	{
 		setTitle("Calcular Triangulo");
-		image = ImageIO.read(new URL("/images/triangulo.jpg"));
+		
 		lblimage = new JLabel();
 		
 		

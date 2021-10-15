@@ -1,0 +1,35 @@
+create table alumno(
+	dni varchar(9) primary key,
+	nombre varchar(20),
+	apellidos varchar(30),
+	direccion varchar(30),
+	tfno varchar(9),
+	nota_expediente decimal(4,2));
+
+create table profesor(
+	dni_prof varchar(9) primary key,
+	nombre varchar(20),
+	apellidos varchar(30),
+	titulacion varchar(50));
+
+create table asignatura(
+	cod_asig int primary key,
+	nombre varchar(20),
+	creditos int,
+	obs varchar(50));
+
+create table imparte(
+	dni_prof varchar(9),
+	cod_asig int,
+	curso varchar(10),
+	primary key(dni_prof,cod_asig),
+	foreign key(dni_prof) references profesor(dni_prof),	
+	foreign key(cod_asig) references asignatura(cod_asig));
+
+create table matricula
+	(
+	dni varchar(9),
+	cod_asig int,
+	primary key(dni,cod_asig),
+	foreign key(dni) references alumno(dni),
+	foreign key(cod_asig) references asignatura(cod_asig));
