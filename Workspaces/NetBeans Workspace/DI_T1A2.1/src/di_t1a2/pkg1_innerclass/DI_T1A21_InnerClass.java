@@ -21,41 +21,35 @@ import javafx.stage.Stage;
 
 
 public class DI_T1A21_InnerClass extends Application {
-        Button btn = new Button();
-        Button btn2 = new Button();
-        Circle circulo = new Circle(5, Color.GREY);
+        private Button btn;
+        private Button btn2;
+        private Circle circulo;
         double cambiarRadio = 5.00;
+        private Scene scene;
+        private HBox botones;
+        private BorderPane root;
+        
     @Override
     public void start(Stage primaryStage) {
 
+        btn = new Button();
+        btn2 = new Button();
         btn.setText("Aumentar tamaño");
         btn2.setText("Disminuir tamaño");
-        /*
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                circulo.setRadius(circulo.getRadius()+cambiarRadio);
-            }
-        });*/
+        circulo = new Circle(20, Color.GREY);
+        circulo.setStroke(Color.BLACK);
+        circulo.setFill(Color.TRANSPARENT);
         btn.addEventFilter(MouseEvent.MOUSE_PRESSED, new ManejadorBoton1());
-        /*
-        btn2.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                circulo.setRadius(circulo.getRadius()-cambiarRadio);
-            }
-        });
-        */
         btn2.addEventFilter(MouseEvent.MOUSE_PRESSED, new ManejadorBoton2());
-        HBox botones = new HBox();
+        botones = new HBox();
         botones.getChildren().addAll(btn,btn2);
-        BorderPane root = new BorderPane();
+        root = new BorderPane();
         root.setBottom(botones);
         botones.setAlignment(Pos.CENTER);
         root.setCenter(circulo);
         
         
-        Scene scene = new Scene(root, 300, 300);
+        scene = new Scene(root, 300, 300);
         
         primaryStage.setTitle("ControlCircle");
         primaryStage.setScene(scene);
@@ -65,8 +59,8 @@ public class DI_T1A21_InnerClass extends Application {
     {
         @Override
         public void handle(MouseEvent event) {
-            if(circulo.getRadius() < 50.00)
-            circulo.setRadius(circulo.getRadius()+cambiarRadio);
+            if(circulo.getRadius() < 55.00)
+                circulo.setRadius(circulo.getRadius()+cambiarRadio);
         } 
     }
     class ManejadorBoton2 implements EventHandler<MouseEvent>
@@ -74,13 +68,10 @@ public class DI_T1A21_InnerClass extends Application {
 
         @Override
         public void handle(MouseEvent event) {
-            if(circulo.getRadius() > 3.00)
-            circulo.setRadius(circulo.getRadius()-cambiarRadio);
+            if(circulo.getRadius() > 5.00)
+                circulo.setRadius(circulo.getRadius()-cambiarRadio);
         } 
     }
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }

@@ -20,12 +20,15 @@ import javafx.stage.Stage;
  * @author usuario
  */
 public class DI_T1A22 extends Application {
-    Button btn = new Button();
-    Button btn2 = new Button();
-    Button btn3 = new Button();
-    Button btn4 = new Button();
-    Insets margen = new Insets(10, 10, 10, 10);
-    
+    private Button btn = new Button();
+    private Button btn2 = new Button();
+    private Button btn3 = new Button();
+    private Button btn4 = new Button();
+    private Insets margen = new Insets(10, 10, 10, 10);
+    private HBox botones;
+    private StackPane root;
+    private Scene scene;
+
     @Override
     public void start(Stage primaryStage) {
 
@@ -33,55 +36,52 @@ public class DI_T1A22 extends Application {
         btn2.setText("Abrir");
         btn3.setText("Guardar");
         btn4.setText("Imprimir");
-        
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
+        btn.setOnAction(new EventHandler<ActionEvent>() 
+        {
             @Override
-            public void handle(ActionEvent event) {
+            public void handle(ActionEvent event) 
+            {
                 System.out.println("Nuevo Proceso");
             }
         });
-        btn2.setOnAction(new EventHandler<ActionEvent>() {
-            
+        btn2.setOnAction(new EventHandler<ActionEvent>() 
+        {
             @Override
-            public void handle(ActionEvent event) {
+            public void handle(ActionEvent event) 
+            {
                 System.out.println("Abrir Proceso");
             }
         });
-        btn3.setOnAction(new EventHandler<ActionEvent>() {
-            
+        btn3.setOnAction(new EventHandler<ActionEvent>() 
+        {
             @Override
-            public void handle(ActionEvent event) {
+            public void handle(ActionEvent event) 
+            {
                 System.out.println("Guardar Proceso");
             }
         });
-        btn4.setOnAction(new EventHandler<ActionEvent>() {
-            
+        btn4.setOnAction(new EventHandler<ActionEvent>() 
+        {
             @Override
-            public void handle(ActionEvent event) {
+            public void handle(ActionEvent event) 
+            {
                 System.out.println("Imprimir Proceso");
             }
         });
         
-        HBox botones = new HBox();
+        botones = new HBox();
         botones.getChildren().addAll(btn, btn2, btn3, btn4);
         botones.setMargin(btn, margen);
         botones.setMargin(btn2, margen);
         botones.setMargin(btn3, margen);
         botones.setMargin(btn4, margen);
-        StackPane root = new StackPane();
+        root = new StackPane();
         root.getChildren().add(botones);
-        
-        Scene scene = new Scene(root);
-        
+        scene = new Scene(root);   
         primaryStage.setTitle("AnonymousInnerClass");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }
