@@ -3,38 +3,36 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package di_t1a2.pkg4;
+package di_t1a2.pkg5;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Pane;
-import javafx.scene.text.Text;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
  *
  * @author usuario
  */
-public class DI_T1A24 extends Application {
+public class DI_T1A25 extends Application {
     
     @Override
     public void start(Stage primaryStage) {
         Button btn = new Button();
-        Text txt = new Text(30,30,"Arrastra este texto");
-        
-        txt.setText("Arrastra este texto");
-        txt.setOnMouseDragged(e -> {
-                String txt2 = "Arrastra este texto: (" + (int)txt.getX() +"),("+ (int)txt.getY()+")";
-                txt.setText(txt2);
-                txt.setX(e.getX());
-                txt.setY(e.getY());
+        btn.setText("Say 'Hello World'");
+        btn.setOnAction(new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Hello World!");
+            }
         });
         
-        Pane root = new Pane();
-        root.getChildren().add(txt);
+        StackPane root = new StackPane();
+        root.getChildren().add(btn);
         
         Scene scene = new Scene(root, 300, 250);
         
