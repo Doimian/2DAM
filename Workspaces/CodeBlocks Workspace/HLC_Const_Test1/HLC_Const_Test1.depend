@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1634646004 source:c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_const_test1\main.cpp
+	<iostream>
+	"Hora.h"
+
+1634646689 c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_const_test1\include\hora.h
+	<iostream>
+
+1634644685 source:c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_const_test1\src\hora.cpp
+	"Hora.h"
+
