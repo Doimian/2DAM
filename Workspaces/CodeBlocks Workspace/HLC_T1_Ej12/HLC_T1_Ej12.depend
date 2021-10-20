@@ -1,4 +1,12 @@
 # depslib dependency file v1.0
-1634115170 source:c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_t1_ej12\main.cpp
+1634719202 source:c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_t1_ej12\main.cpp
 	<iostream>
+	"Persona.h"
+
+1634719506 c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_t1_ej12\include\persona.h
+	<iostream>
+	<string>
+
+1634719488 source:c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_t1_ej12\src\persona.cpp
+	"Persona.h"
 

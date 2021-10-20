@@ -1,5 +1,4 @@
 #include "Persona.h"
-
 Persona::Persona(string nombre, string apellidos)
 {
     nombre = nombre;
@@ -53,45 +52,44 @@ int Persona::edadActual(string fechaNacimiento)
     int diaNacimiento;
     int edActual;
 
-    strcpy();
 
     return edActual;
 }
 void Persona::imprimir()
 {
-    cout << "Nombre : " << this->nombre; << endl;
-    cout << "Apellidos : " << this->apellidos; << endl;
+    cout << "Nombre : " << this->nombre << endl;
+    cout << "Apellidos : " << this->apellidos << endl;
     if(this->fechaNacimiento != "")
-        cout << "Fecha de Nacimiento : " << this->fechaNacimiento; << endl;
+        cout << "Fecha de Nacimiento : " << this->fechaNacimiento << endl;
     else
         cout << "No se ha registrado una fecha de nacimiento para " << this->nombre << endl;
     if(this->domicilio != "")
-        cout << "Domicilio : " << this->domicilio; << endl;
+        cout << "Domicilio : " << this->domicilio << endl;
     else
         cout << "No se ha registrado un telefono para " << this->nombre << endl;
     if(this->telefono != "")
-        cout << "Telefono : " << this->telefono; << endl;
+        cout << "Telefono : " << this->telefono << endl;
     else
         cout << "No se han registrado estudios para " << this->nombre << endl;
     if(this->estudios!= "")
-        cout << "Estudios : " << this->estudios; << endl;
+        cout << "Estudios : " << this->estudios << endl;
     else
         cout << "No se han registrado estudios para " << this->nombre << endl;
 }
 bool Persona::comparar(Persona otraPersona)
 {
     bool iguales = true;
-    if(this->nombre != otraPersona->nombre)
+    if(this->nombre != otraPersona.nombre)
         iguales = false;
-    if(this->apellidos != otraPersona->apellidos)
+    if(this->apellidos != otraPersona.apellidos)
         iguales = false;
-    if(this->fechaNacimiento != otraPersona->fechaNacimiento)
+    if(this->fechaNacimiento != otraPersona.fechaNacimiento)
         iguales = false;
-    if(this->domicilio != otraPersona->domicilio)
+    if(this->domicilio != otraPersona.domicilio)
         iguales = false;
-    if(this->telefono != otraPersona->telefono)
+    if(this->telefono != otraPersona.telefono)
         iguales = false;
-    if(this->estudios != otraPersona->estudios)
+    if(this->estudios != otraPersona.estudios)
         iguales = false;
     return iguales;
 }

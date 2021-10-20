@@ -1,0 +1,2 @@
+Writing Windows WDM Device Drivers - Chris Cant
+Linux Device Drivers - O'Reilly
