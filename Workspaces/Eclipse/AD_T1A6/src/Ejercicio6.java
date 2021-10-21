@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 public class Ejercicio6
 {
-
 	private static String SGBD;
 	private static String database;
 	private static String usuario;
@@ -18,6 +17,7 @@ public class Ejercicio6
 	private static Conexion crearConexion;
 	private static Statement statement;
 	private static PreparedStatement pstatement;
+	private static PreparedStatement pstatement2;
 	private static Scanner sc;
 	private static Connection conexion;
 	private static DatabaseMetaData metadata;
@@ -142,10 +142,9 @@ public class Ejercicio6
 		System.out.println("Datos de los alumnos:");
 		while(tableData.next())
 		{
-			System.out.println(tableData.getString(1));
+			System.out.println(tableData.getString(1) + ";\t" + tableData.getString(2) + ";\t" + tableData.getString(3) + ";\t" + tableData.getString(4) + ";\t" + tableData.getString(5) + ";\t" + tableData.getDouble(6));
 		}
 	}
-
 
 	private static void mostrarDatosProfesores() throws SQLException 
 	{
@@ -154,10 +153,9 @@ public class Ejercicio6
 		System.out.println("Datos de los profesores:");
 		while(tableData.next())
 		{
-			System.out.println(tableData.getString(1) + ";\t" + tableData.getString(2) + ";\n" + tableData.getString(3) + ";\n" + tableData.getString(4));
+			System.out.println(tableData.getString(1) + ";\t" + tableData.getString(2) + ";\t" + tableData.getString(3) + ";\t" + tableData.getString(4));
 		}
 	}
-
 
 	private static void mostrarAsignaturasProfesores() throws SQLException 
 	{
@@ -166,7 +164,7 @@ public class Ejercicio6
 		dniProf = sc.nextLine();
 		String sql = "Select profesor.nombre, asignatura.nombre from profesor join imparte on (profesor.dni_prof=imparte.dni_prof) join asignatura on (asignatura.cod_asig=imparte.cod_asig) where profesor.dni_prof = ?";
 		pstatement = conexion.prepareStatement(sql);
-		
+		pstatement.setString(1,dniProf);
 		ResultSet tableData = pstatement.executeQuery();
 		System.out.println("Profesor\tAsignatura");
 		while(tableData.next())
@@ -175,16 +173,15 @@ public class Ejercicio6
 		}
 	}
 
-
 	private static void mostrarAlumnosMatriculados() throws SQLException 
 	{
 		int codAsig;
-		String limpiaScanner;
 		System.out.println("Indica el codigo de la asignatura:");
 		codAsig = sc.nextInt();
-		limpiaScanner = sc.next();
-		String sql = "Select asignatura.nombre, alumno.nombre from alumno join matricula on (alumno.dni=matricula.dni) join asignatura on (asignatura.cod_asig=matricula.cod_asig) where asignatura.cod =" + codAsig;
-		ResultSet tableData = statement.executeQuery(sql);
+		String sql = "Select asignatura.nombre, alumno.nombre from alumno join matricula on (alumno.dni=matricula.dni) join asignatura on (asignatura.cod_asig=matricula.cod_asig) where asignatura.cod_asig = ?";
+		pstatement2 = conexion.prepareStatement(sql);
+		pstatement2.setInt(1,codAsig);
+		ResultSet tableData = pstatement2.executeQuery();
 		System.out.println("Datos de los alumnos:");
 		System.out.println("Asignatura\tAlumno");
 		while(tableData.next())
@@ -192,6 +189,4 @@ public class Ejercicio6
 			System.out.println(tableData.getString(1) + ";\t" + tableData.getString(2));
 		}
 	}
-
-
 }

@@ -33,13 +33,13 @@ create table matricula(
 	foreign key(dni) references alumno(dni),
 	foreign key(cod_asig) references asignatura(cod_asig));
 
-Insert into alumno values ("12312312T","Alejandro","Gonzalez","Murcia","657483918",08.50);
-Insert into alumno values ("34587674Q","Lucia","Perez","Valencia","689789789",06.30);
-Insert into profesor values ("98765458L","Paco","Perez Juliano","Mucha titulacion");
-Insert into profesor values ("67549823B","Andrea","Federiquez","Mucha titulacion");
-Insert into asignatura values (1,"Matematicas",20,"Buena suerte");
-Insert into asignatura values (2,"Quimica",15,"Esta es peor todavia");
-Insert into imparte values ("98765458L",1,"2Bach C");
-Insert into imparte values ("67549823B",2,"1Bach B");
-Insert into matricula values ("12312312T",1);
-Insert into matricula values ("34587674Q",2);
+Insert into alumno values ('12312312T','Alejandro','Gonzalez','Murcia','657483918',08.50);
+Insert into alumno values ('34587674Q','Lucia','Perez','Valencia','689789789',06.30);
+Insert into profesor values ('98765458L','Paco','Perez Juliano','Mucha titulacion');
+Insert into profesor values ('67549823B','Andrea','Federiquez','Mucha titulacion');
+Insert into asignatura values (1,'Matematicas',20,'Buena suerte');
+Insert into asignatura values (2,'Quimica',15,'Esta es peor todavia');
+Insert into imparte values ('98765458L',1,'2Bach C');
+Insert into imparte values ('67549823B',2,'1Bach B');
+Insert into matricula values ('12312312T',1);
+Insert into matricula values ('34587674Q',2);
