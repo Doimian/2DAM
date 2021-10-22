@@ -1,40 +1,4 @@
 #include "Persona.h"
-Persona::Persona(string nombre, string apellidos)
-{
-    nombre = nombre;
-    apellidos = apellidos;
-    fechaNacimiento = "";
-    domicilio = "";
-    telefono = "";
-    estudios = "";
-}
-Persona::Persona(string nombre,string apellidos,string fechaNacimiento)
-{
-    nombre = nombre;
-    apellidos = apellidos;
-    fechaNacimiento = fechaNacimiento;
-    domicilio = "";
-    telefono = "";
-    estudios = "";
-}
-Persona::Persona(string nombre,string apellidos,string fechaNacimiento,string domicilio)
-{
-    nombre = nombre;
-    apellidos = apellidos;
-    fechaNacimiento = fechaNacimiento;
-    domicilio = domicilio;
-    telefono = "";
-    estudios = "";
-}
-Persona::Persona(string nombre,string apellidos,string fechaNacimiento,string domicilio, string telefono)
-{
-    nombre = nombre;
-    apellidos = apellidos;
-    fechaNacimiento = fechaNacimiento;
-    domicilio = domicilio;
-    telefono = telefono;
-    estudios = "";
-}
 Persona::Persona(string nombre,string apellidos,string fechaNacimiento,string domicilio, string telefono,string estudios)
 {
     nombre = nombre;

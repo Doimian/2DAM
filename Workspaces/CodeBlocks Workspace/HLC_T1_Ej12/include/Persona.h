@@ -15,11 +15,7 @@ class Persona
         string estudios;
 
     public:
-        Persona(string,string);
-        Persona(string,string,string);
-        Persona(string,string,string,string);
-        Persona(string,string,string,string,string);
-        Persona(string,string,string,string,string,string);
+        Persona(string = "",string = "",string = "",string ="",string="",string="");
         virtual ~Persona();
 
         int edadActual(string);
