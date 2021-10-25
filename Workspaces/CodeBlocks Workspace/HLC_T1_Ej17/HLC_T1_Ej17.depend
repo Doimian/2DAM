@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1635018716 source:/home/damian/2DAM/Workspaces/CodeBlocks Workspace/HLC_T1_Ej17/src/CuentaAhorro.cpp
+	"CuentaAhorro.h"
+
+1635018212 /home/damian/2DAM/Workspaces/CodeBlocks Workspace/HLC_T1_Ej17/include/CuentaAhorro.h
+
+1635018674 source:/home/damian/2DAM/Workspaces/CodeBlocks Workspace/HLC_T1_Ej17/main.cpp
+	<iostream>
+	"CuentaAhorro.h"
+

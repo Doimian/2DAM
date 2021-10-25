@@ -1,23 +1,32 @@
 #include "Persona.h"
 Persona::Persona(string nombre,string apellidos,string fechaNacimiento,string domicilio, string telefono,string estudios)
 {
-    nombre = nombre;
-    apellidos = apellidos;
-    fechaNacimiento = fechaNacimiento;
-    domicilio = domicilio;
-    telefono = telefono;
-    estudios = estudios;
+    this->nombre = nombre;
+    this->apellidos = apellidos;
+    this->fechaNacimiento = fechaNacimiento;
+    this->domicilio = domicilio;
+    this->telefono = telefono;
+    this->estudios = estudios;
 }
 
-int Persona::edadActual(string fechaNacimiento)
+int Persona::edadActual()
 {
-    int annoNacimiento;
-    int mesNacimiento;
-    int diaNacimiento;
-    int edActual;
+    /*Primero averiguamos el dia y el año actuales*/
+    time_t f = time(0);
+    struct tm * fechaActual = localtime(&f);
+    int annoActual = fechaActual->tm_year + 1900;
+    int diaActual = fechaActual->tm_yday;
 
+    /*Aislar el año y el dia de nacimiento -> formato de la fecha dia/mes/año*/
+    int annoNac = stoi(fechaNacimiento.substr(6,4));
+    int diaNac = stoi(fechaNacimiento.substr(0,2));
+cout << "Anio nac: " << annoNac << " Dia nac: " << diaNac << endl;
+    /*Hacemos las operaciones necesarias*/
+    int edad = annoActual - annoNac;
+    if(diaActual < diaNac)
+        edad -1;
 
-    return edActual;
+    return edad;
 }
 void Persona::imprimir()
 {
@@ -88,15 +97,15 @@ void Persona::setFechaNacimiento(string s)
 }
 void Persona::setDomicilio(string s)
 {
-
+    this->domicilio = s;
 }
 void Persona::setTelefono(string s)
 {
-
+    telefono = s;
 }
 void Persona::setEstudios(string s)
 {
-
+    estudios = s;
 }
 
 Persona::~Persona()

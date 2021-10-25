@@ -1,0 +1,47 @@
+1. ¿Cuál es la expresión correcta?
+   a) <fecha de nacimiento>14-12-1982</fecha de nacimiento>
+   b) <teléfono tipo=movil>637059874</teléfono>
+   c) <contacto>
+    <nombre>
+     Javier
+      </contacto>
+      </nombre>
+ ->d) <email tipo="personal">javier@gmail.com</email>
+
+La respuesta es la d) porque todas las demás tienen algún error sintáctico.
+
+
+2. ¿Qué frase es correcta con respecto al desarrollo de interfaces?
+   a) Es un proceso sencillo porque la misma interfaz es válida para todos los usuarios.
+   b) Una vez creada un interfaz en un lenguaje de alto nivel podremos reutilizarla para cualquier tipo de dispositivo sin necesidad de modificarla.
+   c) Una interfaz descrita con un lenguaje basado en XML se integra directamente en la aplicación.
+ ->d) El uso de interfaces descritas con lenguajes basados en XML permite desarrollar por separado la interfaz gráfica de una aplicación y comportamiento.
+
+El punto fuerte de los lenguajes basados en XML es precisamente su capacidad para separar la interfaz gráfica del código de la aplicación (formato Vista-Controlador)
+y poder de esta forma desarrollar por separado la UI y el comportamiento interno de la aplicación.
+
+3. Los lenguajes de desarrollo de interfaces basados en XML...
+ ->a) …son lenguajes de programación de alto nivel.
+   b) ...permiten desarrollar aplicaciones completas siempre sin necesidad de que intervengan otros lenguajes de programación.
+   c) …solo permiten generar aplicaciones para Internet.
+   d) ...necesitan que, posteriormente, se mapeen los elementos XML a objetos que entienda el dispositivo final.
+
+Los lenguajes basados en XML son lenguajes de marcas o de marcado, que son de alto nivel para hacerlos intuitivos y sencillos de programar una vez conoces las bases.
+
+4. Las herramientas para la generación de interfaces...
+   a) ...son muy complicadas de aprender.
+   b) ...no se integran nunca con otras herramientas de desarrollo de aplicaciones.
+   c) ...se usan para editar la interfaz y poder modificarla en modo texto.
+ ->d) ...permiten al programador o programadora concentrarse en los aspectos relativos al diseño.
+
+Las herramientas para la generación de interfaces sirven para hacer el proceso de desarrollar una interfaz más intuitivo y sencillo, por eso suelen tener GUIs y centrarse en
+los aspectos relativos al diseño.
+
+5. ¿Qué es una aplicación RIA?
+   a) Aquella que solo ejecuta en un terminal.
+ ->b) Un programa con una interfaz de usuario compleja.
+   c) Una aplicación para realizar operaciones bancarias.
+   d) Aquella que se ejecuta en un navegador web y su aspecto y funcionalidad es el de una aplicación de escritorio.
+
+Tal y como el nombre indica, RIA(Rich Interface Application // Aplicación de Interfaz Compleja) son aplicaciones que contienen bastante material gráfico para facilitar el
+desarrollo de interfaces.

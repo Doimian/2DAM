@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cstring>
 #include<string>
-
+#include<ctime>
 using namespace std;
 
 class Persona
@@ -15,10 +15,10 @@ class Persona
         string estudios;
 
     public:
-        Persona(string = "",string = "",string = "",string ="",string="",string="");
+        Persona(string,string,string,string,string,string);
         virtual ~Persona();
 
-        int edadActual(string);
+        int edadActual();
         void imprimir();
         bool comparar(Persona);
 

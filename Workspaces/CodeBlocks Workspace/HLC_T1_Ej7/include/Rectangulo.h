@@ -1,3 +1,7 @@
+#include <iostream>
+#define MIN_VAL 0
+#define MAX_VAL 20
+using namespace std;
 
 class Rectangulo
 {

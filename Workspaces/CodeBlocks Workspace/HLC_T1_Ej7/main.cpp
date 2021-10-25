@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    Rectangulo rec();
+    Rectangulo rec;
     int ancho;
     int longitud;
 
