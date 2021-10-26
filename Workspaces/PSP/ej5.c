@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 int main(void)
 {
-  int* global = 0;
-  putenv("GLOBAL=0");
+  int global = 0;
 
   pid_t id = fork();
 
@@ -14,18 +14,18 @@ int main(void)
   }
   else if(id == 0)
   {
-    for(int i = 0; i < 500; i++)
+    for(int i = 0; i < 100; i++)
     {
-      *global += 1;
-      printf("HIJO: La variable global vale %d\n",*global);
+      global += 1;
+      printf("HIJO: La variable global vale %d\n",global);
     }
   }
   else
   {
-    for(int i = 0; i < 500; i++)
+    for(int i = 0; i < 100; i++)
     {
-      *global += 1;
-      printf("PADRE: La variable global vale %d\n",*global);
+      global += 1;
+      printf("PADRE: La variable global vale %d\n",global);
     }
   }
   return 0;

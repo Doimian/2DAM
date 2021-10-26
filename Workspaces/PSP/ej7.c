@@ -6,12 +6,11 @@
 int main(void)
 {
   int gi = 0;
-  for(int j = 0; j < 5; j++)
+  for(int j = 0; j < 100; j++)
   {
     pid_t id = fork();
     if(id == 0)
       {
-
         printf("Hijo con codigo identificador %d\n", j);
         for(int i = 0; i < 10; i++)
         {
@@ -22,9 +21,10 @@ int main(void)
       }
       if(id > 0)
       {
-        for(int i = 0; i<5;i++)
-          wait(NULL);
-        return 0;
+        int a;
+        for(int i = 0; i<100;i++)
+          wait(&a);
       }
   }
+  return 0;
 }
