@@ -14,50 +14,44 @@ int main(int argc, char* argv[])
     printf("Este programa requiere como parametro un numero para factorizar ==> ./ej16 1111 \n(además este número debe ser menor que 6 para que el programa funcione correctamente)\n");
     return 0;
   }
+  /*Numero pasado como parametro*/
   int pre = atoi(argv[1]);
-  int fac;
-  /* Primer fork */
-  pid_t pid = fork();
-  /*Origen de la rama de hijos que buscarán el factor*/
-  if(pid==0)
-  {
-   int num = factorize(pre);
-   exit(num);
-  }
-  else if(pid > 0)
-  {
-    /*Proceso padre original que espera el resultado*/
-    wait(&fac);
-    fac >> 8;
-    printf("El factorial de %d es %d\n", pre, fac);
-    return 0;
-  }
+  /*Resultado final*/
+  int fac = 0;
+  /*Iniciamos la función recursuva*/
+  fac = factorize(pre);
+  /*Imprimimos el resultado*/
+  printf("El numero %d factorizado es ==> %d",pre,fac);
 }
 
+/*Funcion graciosa*/
 int factorize(int pre)
 {
-  int num;
-    pid_t pid = fork();
-    if(pid == 0)
-    {
-      /*Hijo*/
-      if(pre <= 1)
-      {
-        exit(1);
-      }
-      else
-      {
-        exit(pre * factorize(pre-1));
-      }
-    }
-    else if (pid > 0)
-    {
-      /*Padre*/
-      wait(&num);
-      return num >> 8;
-    }
+  int fac;
+  /* Hacemos un fork para representar el caso base y el no base */
+  pid_t pid = fork();
+  /* En caso de error */
+  if(pid == !1)
+  {
+    printf("Error al crear un proceso\n");
+    return -1;
+  }
+  /*Proceso hijo --> Caso base(1): Devuelve 1 // Caso no base(!1): llama a la función otra vez*/
+  else if(pid == 0)
+  {
+    fac = pre;
+    if(pre == 1)
+      exit(fac);
     else
     {
-      printf("Error al crear un proceso\n");
+      fac = factorize(pre-1);
+      exit(fac);
     }
+  }
+  /*Proceso padre, espera a que el hijo termine*/
+  else
+  {
+      wait(&fac);
+      return fac >> 8;
+  }
 }

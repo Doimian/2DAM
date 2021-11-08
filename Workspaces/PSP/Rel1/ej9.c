@@ -1,12 +1,11 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <sys/stat.h>
 
 #define PERIODO 10
-
 int main(int argc,char* argv[])
 {
 	pid_t pid;
@@ -14,14 +13,18 @@ int main(int argc,char* argv[])
 	int periodo = PERIODO;
 	int init_size;
 	int actual_size;
+	char* orden;
 	struct stat info;
 
 	/* Controla el numero de argumetnoss*/
-	if(argc != 3)
-		{
-			printf("Este programa requiere 3 parametros ==> ./ej16 -xxx /ruta/fichero\nDonde -xxx es la periodicidad en segundos entre cada comprobacion\n");
+	if(argc != 4)
+	{
+			printf("Este programa requiere 3 parametros ==> ./ej9 /ruta/fichero -p orden\nDonde -p es la periodicidad entre cada comprobacion y orden un comando a ejecutar\n");
 			return 0;
-		}
+	}
+	/*Asignamos los valores*/
+	periodo = atoi(argv[2]);
+	orden = argv[3];
 
 	/*Crea un proceso hijo apra calcular el tamaño inical del fichero a espiar*/
 	if((pid = fork()) == 0)
@@ -30,18 +33,17 @@ int main(int argc,char* argv[])
 		stat(argv[1], &info);
 
 		/*Informa al padre*/
-		exti(info.st_size);
+		exit(info.st_size);
 	}
 
-/*Padre recoge tamaño*/
-wait(&state);
-init_size = state >> 8;
+	/*Padre recoge tamaño*/
+	wait(&state);
+	init_size = state >> 8;
 
-/*Bucle de funcionamiento*/
-
-for(;;)
+/*Bucle infinito de comprobación*/
+while(1)
 {
-	/*Duerme el proceos el tiempo indicado*/
+	/*El proceso espera el tiempo indicado*/
 	sleep(periodo);
 
 	/*Una vez pasado el tiempo, vuelve a crear un 
@@ -50,7 +52,7 @@ for(;;)
 
 	pid = fork();
 
-	if(!pid)
+	if(pid == 0)
 	{
 		/* Observa el tamaño del fichero*/
 		stat(argv[1], &info);
@@ -58,7 +60,6 @@ for(;;)
 		/*Termina*/
 		exit(info.st_size);
 	}
-
 	else if(pid > 0)
 	{
 		wait(&state);
@@ -77,13 +78,11 @@ for(;;)
 			/* Crea un proceso hijo para ejecutar al comando indicado*/
 			if(!fork())
 			{
-				execl();
+				system(orden);
+				exit(1);
 			}
 		}
 	}
-
-
 }
-
 return 0;
 }

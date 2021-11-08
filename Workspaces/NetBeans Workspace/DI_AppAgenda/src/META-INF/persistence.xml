@@ -13,9 +13,9 @@
     <class>entities.Persona</class>
     <class>entities.Provincia</class>
     <properties>
-        <property 
-            name="eclipselink.allow-zero-id" 
-            value="true"/>
+      <property 
+          name="eclipselink.allow-zero-id" 
+          value="true"/>
       <property 
           name="javax.persistence.jdbc.url" 
           value="jdbc:derby:/home/damian/2DAM/Workspaces/NetBeans Workspace/DI_AppAgenda/DBAgenda;create=true"/>
