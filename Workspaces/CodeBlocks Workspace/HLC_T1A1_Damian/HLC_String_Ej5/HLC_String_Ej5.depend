@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1634041732 source:c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_string_ej5\main.cpp
+	<iostream>
+	<cstring>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="DI_FXMLAppLibreta.jnlp">
+  <information>
+    <title>DI_FXMLAppLibreta</title>
+    <vendor>damian</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="DI_FXMLAppLibreta.jar" size="7134" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="di_fxmlapplibreta.DI_FXMLTableView"  name="DI_FXMLAppLibreta" />
+  <update check="always"/>
+</jnlp>

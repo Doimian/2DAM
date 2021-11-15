@@ -10,7 +10,7 @@ bool operaciones(double a, double b, double &suma, double &resta, double &multi,
 void isPar(int n, bool &r);
 void isPrimo(int n, bool &r);
 
-int main()
+int main(void)
 {
     double valor1, valor2, resultado, area, perimetro;
     double sumaa, resta, multi, divi;
@@ -57,7 +57,7 @@ int main()
     else if(res == false)
         cout << "El numero " << valor1 << " no es primo" << endl << endl;
 
-    cout << "Actividad 1.6: hacer la suma, resta, multiplicación y división de dos numeros indicando si hay un error" << endl;
+    cout << "Actividad 1.6: hacer la suma, resta, multiplicacion y division de dos numeros indicando si hay un error" << endl;
     cout << "Numero 1: ";
     cin >> valor1;
     cout << "Numero 2: ";

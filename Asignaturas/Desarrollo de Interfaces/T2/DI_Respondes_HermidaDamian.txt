@@ -1,3 +1,4 @@
+Responde :
 1. ¿Cuál es la expresión correcta?
    a) <fecha de nacimiento>14-12-1982</fecha de nacimiento>
    b) <teléfono tipo=movil>637059874</teléfono>
@@ -45,3 +46,18 @@ los aspectos relativos al diseño.
 
 Tal y como el nombre indica, RIA(Rich Interface Application // Aplicación de Interfaz Compleja) son aplicaciones que contienen bastante material gráfico para facilitar el
 desarrollo de interfaces.
+
+Aplicaciones de ejemplo JavaFX:
+
+  Hello World, JavaFX Style:
+
+  Creating a Form in JavaFX:
+
+  Fancy Forms with JavaFX CSS:
+
+  Animation and Visual Effects in JavaFX:
+
+
+Retrospectivas del proyecto AppHotel - Xenial
+
+Retrospectivas globales

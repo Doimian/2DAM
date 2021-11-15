@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1636912235 source:/home/damian/2DAM/Workspaces/CodeBlocks Workspace/HLC_T1A2_Ej1/main.cpp
+	"Complejo.h"
+
+1636912369 /home/damian/2DAM/Workspaces/CodeBlocks Workspace/HLC_T1A2_Ej1/include/Complejo.h
+	<iostream>
+
+1636911791 source:/home/damian/2DAM/Workspaces/CodeBlocks Workspace/HLC_T1A2_Ej1/src/Complejo.cpp
+	<iostream>
+	"Complejo.h"
+

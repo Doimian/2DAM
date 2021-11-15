@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1633285882 source:c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_t1_ej6\main.cpp
+	<iostream>
+	"Racional.h"
+
+1633285848 source:c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_t1_ej6\src\racional.cpp
+	"Racional.h"
+	<iostream>
+
+1633284268 c:\users\usuario\documents\github\2dam\workspaces\codeblocks workspace\hlc_t1_ej6\include\racional.h
+

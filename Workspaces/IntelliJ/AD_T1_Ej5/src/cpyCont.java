@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class cpyCont
@@ -6,35 +7,26 @@ public class cpyCont
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
-        String[] content = new String[0];
+        ArrayList<String> content= new ArrayList<String>();
         String lineContent;
         System.out.println("Indica:");
-        System.out.println("El nombre del fichero de origen: ");
         System.out.println("El fichero destino (no debe existir)");
         File file = new File(sc.nextLine().trim());
-        File file2 = new File(sc.nextLine().trim());
+        System.out.println("Escriba 20 lineas de contenido por el teclado:");
+        for(int i= 0; i < 20; i++)
+        {
+            content.add(sc.nextLine() + "\n");
+        }
         try {
-            BufferedReader bfr = new BufferedReader(new FileReader(file));
             BufferedWriter bfw = new BufferedWriter(new FileWriter(file,true));
             for(int i = 0; i < 20; i++)
             {
-                if((lineContent = bfr.readLine()) != null)
-                {
-                    bfw.write(lineContent);
-                    content[i] = lineContent;
-                }
-                else {
-                    System.out.println("El fichero tiene menos de 20 lineas de contenido");
-                    break;
-                }
-                System.out.println("El contenido de las primeras 20 lineas del fichero es:");
-                for(int j = 0; j <= i; j++)
-                {
-                    System.out.println(content[j]);
-                }
+                    bfw.write(content.get(i));
             }
+            System.out.println("Fichero creado y escrito con exito");
+            bfw.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("El fichero no ha podido ser creado o ya existe");
         }
 
     }

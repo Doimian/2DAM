@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class FileMixer
@@ -8,11 +10,11 @@ public class FileMixer
         Scanner sc = new Scanner(System.in);
         System.out.println("Indica:");
         System.out.println("Primer fichero de origen: ");
-        System.out.println("Segundo fichero de origen: ");
-        System.out.println("Fichero resultado (no debe existir)");
-
         String fileName1 = sc.nextLine().trim();
+
+        System.out.println("Segundo fichero de origen: ");
         String fileName2 = sc.nextLine().trim();
+        System.out.println("Fichero resultado (no debe existir)");
         String fileName3 = sc.nextLine().trim();
 
         File file1 = new File(fileName1);
@@ -23,29 +25,45 @@ public class FileMixer
             try
             {
                 int i = 0;
-                String[] file1Content = null;
-                String[] file2Content = null;
-                String temp;
+                ArrayList<String> file1Content = new ArrayList<String>();;
+                ArrayList<String> file2Content = new ArrayList<String>();;
+
+                String temp = null;
+
+                String temp2 = null;
                 file3.createNewFile();
                 BufferedReader bfr = new BufferedReader(new FileReader(file1));
                 BufferedReader bfr2 = new BufferedReader(new FileReader(file2));
-                BufferedWriter bfw = new BufferedWriter(new FileWriter((file3)));
-                while((temp = bfr.readLine()) != null)
+                BufferedWriter bfw = new BufferedWriter(new FileWriter(file3));
+
+                while((temp = bfr.readLine()) != null || (temp2 = bfr2.readLine()) != null )
                 {
-                    file1Content[i] = temp;
-                    i++;
+                    if(temp != null)
+                        file1Content.add(temp + "\n");
+                    if(temp2 != null)
+                        file2Content.add(temp2 + "\n");
                 }
-                i = 0;
-                while((temp = bfr.readLine()) != null)
+                for(i = 0; i < file1Content.size() || i < file2Content.size(); i++)
                 {
-                    file2Content[i] = temp;
-                    i++;
+                    try {
+                        System.out.println(file1Content.get(i));
+                        bfw.write(file1Content.get(i));
+
+                    }catch(IndexOutOfBoundsException e)
+                    {
+                        //Fin del 1er fichero
+                    }
+                    try
+                    {
+                        System.out.println(file2Content.get(i));
+                        bfw.write(file2Content.get(i));
+                    }catch(IndexOutOfBoundsException e)
+                    {
+                        //Fin del 1er fichero
+                    }
+
                 }
-                for(i = 0;file1Content[i] != null || file2Content[i] != null; i++)
-                {
-                    bfw.write(file1Content[i]);
-                    bfw.write(file2Content[i]);
-                }
+                bfw.close();
             } catch (FileNotFoundException e)
             {
                 System.out.println("Alguno de los ficheros no existe");
