@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.beans.*?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<fx:root 
+    type="javafx.scene.layout.HBox" 
+    xmlns:fx="http://javafx.com/fxml" >
+    
+    <TextField fx:id="textField"/>
+    <Button fx:id="boton" text="Grabar"/>
+</fx:root>

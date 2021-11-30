@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import miscontroles.selectordeslizamiento.SelectorDeslizamiento?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="245.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appusoselector.APPUsoSelectorController">
+   <children>
+      <Label alignment="TOP_LEFT" contentDisplay="CENTER" style="-fx-text-fill: red;" text="Selectores" />
+      <SelectorDeslizamiento fx:id="sdUno" onAction="#topSelector"/>
+      <SelectorDeslizamiento fx:id="sdDos" onAction="#botSelector"/>
+      <Label fx:id="lblRes" text=" " />
+   </children>
+</VBox>

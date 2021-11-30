@@ -1,4 +1,4 @@
-Responde :
+APARTADO 1 --> RESPONDE:
 1. ¿Cuál es la expresión correcta?
    a) <fecha de nacimiento>14-12-1982</fecha de nacimiento>
    b) <teléfono tipo=movil>637059874</teléfono>
@@ -16,7 +16,9 @@ La respuesta es la d) porque todas las demás tienen algún error sintáctico.
    a) Es un proceso sencillo porque la misma interfaz es válida para todos los usuarios.
    b) Una vez creada un interfaz en un lenguaje de alto nivel podremos reutilizarla para cualquier tipo de dispositivo sin necesidad de modificarla.
    c) Una interfaz descrita con un lenguaje basado en XML se integra directamente en la aplicación.
+
  ->d) El uso de interfaces descritas con lenguajes basados en XML permite desarrollar por separado la interfaz gráfica de una aplicación y comportamiento.
+
 
 El punto fuerte de los lenguajes basados en XML es precisamente su capacidad para separar la interfaz gráfica del código de la aplicación (formato Vista-Controlador)
 y poder de esta forma desarrollar por separado la UI y el comportamiento interno de la aplicación.
@@ -29,6 +31,7 @@ y poder de esta forma desarrollar por separado la UI y el comportamiento interno
 
 Los lenguajes basados en XML son lenguajes de marcas o de marcado, que son de alto nivel para hacerlos intuitivos y sencillos de programar una vez conoces las bases.
 
+
 4. Las herramientas para la generación de interfaces...
    a) ...son muy complicadas de aprender.
    b) ...no se integran nunca con otras herramientas de desarrollo de aplicaciones.
@@ -37,6 +40,7 @@ Los lenguajes basados en XML son lenguajes de marcas o de marcado, que son de al
 
 Las herramientas para la generación de interfaces sirven para hacer el proceso de desarrollar una interfaz más intuitivo y sencillo, por eso suelen tener GUIs y centrarse en
 los aspectos relativos al diseño.
+
 
 5. ¿Qué es una aplicación RIA?
    a) Aquella que solo ejecuta en un terminal.
@@ -47,17 +51,67 @@ los aspectos relativos al diseño.
 Tal y como el nombre indica, RIA(Rich Interface Application // Aplicación de Interfaz Compleja) son aplicaciones que contienen bastante material gráfico para facilitar el
 desarrollo de interfaces.
 
-Aplicaciones de ejemplo JavaFX:
+APARTADO 2 --> SMALL APPS:
+Using FXML to Create a User:
+  https://github.com/Doimian/2DAM/tree/main/Workspaces/NetBeans%20Workspace/JavaFXApplication4
 
-  Hello World, JavaFX Style:
+Aplicación Libreta de direcciones con FXML:
+  https://github.com/Doimian/2DAM/tree/main/Workspaces/NetBeans%20Workspace/DI_FXMLAppLibreta
 
-  Creating a Form in JavaFX:
-
-  Fancy Forms with JavaFX CSS:
-
-  Animation and Visual Effects in JavaFX:
+AppAgenda:
+  https://github.com/Doimian/2DAM/tree/main/Workspaces/NetBeans%20Workspace/DI_AppAgenda
 
 
+APARTADO 3 --> GROUP APP:
+AppHotel - Equipo Xenial
+  https://github.com/ieslosmontecillos-di/apphotel-xenial
+
+
+APARTADO 4 --> RETROSPECTIVAS:
 Retrospectivas del proyecto AppHotel - Xenial
 
-Retrospectivas globales
+Retrospectivas de grupo:
+
+    Revisión de procesos:
+
+    1. En la primera reunión llegamos a la conclusión de que no podíamos modularizar el proyecto desde un primer momento, ya que los componentes del modelo MVC (Modelo (DataBase) – Vista (View – FXML) – Controlador (Controller – Lógica de la app) eran dependientes entre sí. Por ello, en esa primera reunión, creamos de manera conjunta las partes que podrían dar conflicto, y las cuales eran necesarias para poder realizar una división modular del proyecto. En esta primera reunión se creó la base de datos, las clases entidad (EntityClass  - Las clases encargadas de interactuar con la DB), generamos la estructura de paquetes del proyecto, incluimos las librerías pertinentes y además las configuramos para tenerlas en una carpeta llama lib, para de esta forma, asegurar la ejecución de la aplicación incluso en dispositivos donde la JVM no tenga implementadas estas librerías.
+
+    2. En la segunda fase, se dividió el proyecto de forma modular, los encargados de los controladores mas grandes (reserva sala y reserva habitación) construyeron un esqueleto de la vista de dichos controladores para poder realizar las operaciones que se requerían, ya que, para referenciar correctamente los objetos generados mediante el mapeo del fichero FXML era necesaria la creación de dichos objetos y establecerles un FX:ID. Simultáneamente los otros dos miembro retocaron de forma visual los esqueletos mencionados anteriormente dándole una mejor apariencia a la aplicación y hacerla amigable (respuesta Responsive).
+
+    3. Tras la finalización de dichos apartados, teníamos la primera versión funcional de la aplicación, a partir de este momento, todos los miembros del equipo actuamos como sistema infiriendo en las brechas del proyecto, corrigiendo errores y añadiendo las funcionalidades nuevas que surgían en la reunión diaria, en la cual realizábamos un BrainStorming para ampliar las funcionalidades del proyecto.
+
+    4. Por último, el día anterior a la DEMO, realizamos una reunión en la que nos cercioramos de que todo funcionaba perfectamente. En esta reunión realizamos las pruebas necesarias, sometiendo el programa a rigurosos test en los que se cubrían todas las casuísticas que pudieran surgir durante la normal ejecución  de la aplicación.
+
+
+    Fortalezas grupales:
+
+    1. Gran capacidad de trabajo por parte de todo el equipo, siendo capaces de soportar cargas voluminosas de trabajo.
+
+    2. Diversidad en la forma de construir el proyecto, lo que hace que se utilicen una mayor diversidad de métodos y herramientas para la generación del producto.
+
+    3. Trato amigable y metodología de trabajo cómoda, la distribución de tareas, así como la realización de las mismas fue una tarea sencilla debido a que todos los integrantes adoptaron una postura colaborativa.
+
+    4. Buena comunicación, lo que facilitó enormemente los cambios de orientación realizados a lo largo del  proyecto, consiguiendo adaptaciones rápidas y precisas a los problemas e inconvenientes surgidos.
+
+-Debilidades grupales:
+
+    1. Escaso uso de la herramienta Trello, debido a la exagerada generalización de las mismas, lo que hacía que cada tarjeta ocupara mucho tiempo al desarrollador para su finalización. Por ejemplo, había una tarjeta por controlador y no se cambiaba su ubicación hasta haberlo terminado (ocupó todo el proyecto su realización completa).
+
+    2. Para la realización de determinadas tareas se trabajo directamente sobre la rama máster de GitHub, no sucedió nada negativo, pero podría haber supuesto inconvenientes. Deberíamos haber creado más ramas para evitar este trabajo directo con la rama máster.
+
+    3. Debilidad técnica al no incluir la base de datos en el .gitignore, lo que provocó errores con la DB durante la realización del proyecto.
+
+Retrospectivas personales:
+
+
+  Fortalezas personales:
+
+    1. Buena capacidad de trabajo, por lo que he mantenido mi parte del trabajo dentro de los márgenes y no ha retrasado el estado final del proyecto.
+    2. Buena comunicación con mis compañeros, que ha permitido distribuir las tareas equitativamente y resolver los problemas con relativa rapidez.
+    3. Buena experiencia con Github, por lo que he podido resolver alguna duda relacionada con éste para mis compañeros.
+
+
+    Debilidades personales:
+
+    1. Al principio del proyecto me quedé algo atascado con las tareas previas de la clase (AppAgenda), por lo que empezé con un poco de atraso en relación al manejo de los controladores fxml y el entityManagerFactory, por lo que tuve que esforzarme más después.
+    2. Dificultad a la hora de añadir tecnologías externas; no se me ocurrió utilizar el archivo .gitignore para evitar problemas con la base de datos pese a que ya conozco el funcionamiento de ese archivo y lo he utilizado en alguna ocasión.

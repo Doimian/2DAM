@@ -1,0 +1,20 @@
+﻿<concesionario>
+	<coche id="1"
+		matricula="9345-HSX">
+		<marca>Citroen</marca>
+		<modelo>C4 Picasso</modelo>
+		<cilindrada>1.6</cilindrada>
+	</coche>
+	<coche id="2"
+		matricula="8763-BNK">
+		<marca>Opel</marca>
+		<modelo>Astra</modelo>
+		<cilindrada>1.5</cilindrada>
+	</coche>
+	<coche id="3"
+		matricula="1111-JVB">
+		<marca>Audi</marca>
+		<modelo>Q5</modelo>
+		<cilindrada>2.0</cilindrada>
+	</coche>
+</concesionario>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<instituto>
+	<alumno nmat="1">
+		<nombre>Juan</nombre>
+		<apellidos>Jiménez Narbona</apellidos>
+		<telefono>952314578</telefono>
+		<cursosmat id="22">
+			<curso>XML</curso>
+			<curso>BD</curso>
+		</cursosmat>
+	</alumno>
+	<alumno nmat="2">
+		<nombre>David</nombre>
+		<apellidos>Rodríguez Matas</apellidos>
+		<telefono>676223398</telefono>
+		<cursosmat id="39">
+			<curso>Programación Java</curso>
+		</cursosmat>
+	</alumno>
+</instituto>

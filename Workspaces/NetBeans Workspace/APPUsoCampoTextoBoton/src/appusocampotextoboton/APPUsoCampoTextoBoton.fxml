@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import miscontroles.campotextoboton.CampoTextoBoton?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appusocampotextoboton.APPUsoCampoTextoBotonController">
+   <top>
+      <VBox prefHeight="85.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <CampoTextoBoton fx:id="ctb1" onAction="#botonNombre">
+               <VBox.margin>
+                  <Insets bottom="10.0" right="10.0"/>
+               </VBox.margin>
+            </CampoTextoBoton>
+            <CampoTextoBoton fx:id="ctb2" onAction="#botonApellido"/>
+         </children>
+         <BorderPane.margin>
+            <Insets left="10.0" top="10.0"/>
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <bottom>
+      <Label fx:id="lblctb" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0"/>
+         </BorderPane.margin>
+      </Label>
+   </bottom>
+</BorderPane>
