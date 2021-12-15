@@ -1,0 +1,52 @@
+<!-- Page: -->
+<apex:page id="thePage" controller="SupplyController">
+    <br/> SGE: Examen 1er Trimestre <br/>
+    Autor/a: Damián Hermida <br/> <br/>
+    <apex:tabPanel switchType="client" selectedTab="name2" id="theTabPanel">
+        <apex:tab label="Supplies" name="Supplies" id="tabOne">
+            <apex:form >
+                <apex:pageBlock title="Supply List sorted by Total Cost" id="supply_list">
+                    <apex:pageBlockTable value="{! articulos }" var="ar">
+                        <apex:column value="{! ar.Name }">
+                            <apex:facet name="header">
+                                <apex:commandLink action="{! sortByName }"
+                                    reRender="supply_list">Supply Name
+                                </apex:commandLink>
+                            </apex:facet>
+                        </apex:column>
+                        <apex:column value="{! ar.Quantity__c }">
+                            <apex:facet name="header">
+                                <apex:commandLink action="{! sortByQuantity }"
+                                    reRender="supply_list">Quantity 
+                                </apex:commandLink>
+                            </apex:facet>
+                        </apex:column>
+                        <apex:column value="{! ar.Total_Cost__c }">
+                            <apex:facet name="header">
+                                <apex:commandLink action="{! sortByTotalCost }"
+                                    reRender="supply_list">Total Cost
+                                </apex:commandLink>
+                            </apex:facet>
+                        </apex:column>
+                        <apex:column value="{! ar.Unit_Cost__c }">
+                            <apex:facet name="header">
+                                <apex:commandLink action="{! sortByUnitCost }"
+                                    reRender="supply_list">Unit Cost
+                                </apex:commandLink>
+                            </apex:facet>
+                        </apex:column>
+                        <apex:column value="{! ar.Battle_Station__c }">
+                            <apex:facet name="header">
+                                <apex:commandLink action="{! sortByBattleStation }"
+                                    reRender="supply_list">Quantity
+                                </apex:commandLink>
+                            </apex:facet>
+                        </apex:column>
+                        <apex:column value="{! ar.CreatedById }"/>
+                    </apex:pageBlockTable>    
+                </apex:pageBlock>
+            </apex:form>
+        </apex:tab>
+        <apex:tab label="Resources" name="Resources" id="tabTwo">Este Tab esta en construccion</apex:tab>
+    </apex:tabPanel>
+</apex:page>

@@ -1,9 +1,6 @@
-import java.io.DataInputStream;
-import java.io.DataOutput;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 
-public class Libro
+public class Libro implements Serializable
 {
     private long ISBN;
     private String titulo;

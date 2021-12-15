@@ -66,7 +66,13 @@ public class Biblioteca
             }
 
             //Mostramos libros
-            System.out.println("Los libros que hay almacenados en la base de datos son:");
+            if(libros.isEmpty())
+            {
+                System.out.println("No hay libros en la base de datos");
+            }
+            else{
+                System.out.println("Los libros que hay almacenados en la base de datos son:");
+            }
             for (Libro l : libros)
             {
                 l.mostrarLibro();

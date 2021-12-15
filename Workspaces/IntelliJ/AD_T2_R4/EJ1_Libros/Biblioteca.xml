@@ -1,7 +1,2 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<biblioteca>
-    <libro
-            Autor="Miguel de Cervantes"
-            ISBN="148326723"
-            Titulo="Don Quijote"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><biblioteca><libro Autor="J. R. R. Tolkien" ISBN="235252342" Titulo="El Señor de los Anillos"/><libro Autor="J. K. Rowling" ISBN="682736325" Titulo="Harry Potter"/><libro Autor="Hemingway" ISBN="823462364" Titulo="El Principito"/><libro Autor="Miguel de Cervantes" ISBN="148326723" Titulo="Don Quijote"/>
 </biblioteca>
