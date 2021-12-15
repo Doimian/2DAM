@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<biblioteca>
+    <libro
+            Autor="Miguel de Cervantes"
+            ISBN="148326723"
+            Titulo="Don Quijote"/>
+</biblioteca>
