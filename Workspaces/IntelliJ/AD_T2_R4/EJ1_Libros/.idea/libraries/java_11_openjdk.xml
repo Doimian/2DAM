@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="java-11-openjdk">
+    <CLASSES>
+      <root url="file:///lib/jvm/java-11-openjdk" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file:///lib/jvm/java-11-openjdk" recursive="false" />
+  </library>
+</component>

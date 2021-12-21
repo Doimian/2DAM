@@ -1,67 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0aa574a0-d54d-4815-b3b7-de5a56850f79" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../IntelliJ/untitled/src/helo3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IntelliJ/untitled/src/helo3.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/androidTest/java/com/example/t3r1a2_calculadora/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/java/com/example/t3r1a2_calculadora/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/app/src/test/java/com/example/t3r1a2_calculadora/ExampleUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../T3R1A2_Calculadora/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Asignaturas/Desarrollo de Interfaces/T2/DI_Respondes_HermidaDamian.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Asignaturas/Desarrollo de Interfaces/T2/DI_Respondes_HermidaDamian.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Asignaturas/Desarrollo de Interfaces/T2/LoginCSS/src/login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../Asignaturas/Desarrollo de Interfaces/T2/LoginCSS/src/login/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Asignaturas/Programación de Servicios y Procesos/Programacion en C/T1/PSP - Actividad 1.2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Asignaturas/Programación de Servicios y Procesos/Programacion en C/T1/PSP - Actividad 1.2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IntelliJ/DI_T2_R2_A2/out/production/DI_T2_R2_A2/RandomAccessOperating.class" beforeDir="false" afterPath="$PROJECT_DIR$/../IntelliJ/DI_T2_R2_A2/out/production/DI_T2_R2_A2/RandomAccessOperating.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IntelliJ/DI_T2_R2_A2/src/RandomAccessOperating.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IntelliJ/DI_T2_R2_A2/src/RandomAccessOperating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IntelliJ/untitled/out/production/javaProcesos/JavaProcesos.class" beforeDir="false" afterPath="$PROJECT_DIR$/../IntelliJ/untitled/out/production/javaProcesos/JavaProcesos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IntelliJ/untitled/src/JavaProcesos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IntelliJ/untitled/src/JavaProcesos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntelliJ/AD_T2_R3/EJ2_Insertar_en_XML/BibliotecaOrigen" beforeDir="false" afterPath="$PROJECT_DIR$/../IntelliJ/AD_T2_R3/EJ2_Insertar_en_XML/BibliotecaOrigen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntelliJ/AD_T2_R4/EJ1_Libros/EJ1_Libros.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../IntelliJ/AD_T2_R4/EJ1_Libros/EJ1_Libros.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NetBeans Workspace/APPTemporizador/src/apptemporizador/APPTemporizador.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans Workspace/APPTemporizador/src/apptemporizador/APPTemporizador.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NetBeans Workspace/APPTemporizador/src/apptemporizador/APPTemporizadorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans Workspace/APPTemporizador/src/apptemporizador/APPTemporizadorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NetBeans Workspace/Componentes_HermidaDamian/src/miscontroles/temporizador/Temporizador.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans Workspace/Componentes_HermidaDamian/src/miscontroles/temporizador/Temporizador.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NetBeans Workspace/Componentes_HermidaDamian/src/miscontroles/temporizador/Temporizador.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans Workspace/Componentes_HermidaDamian/src/miscontroles/temporizador/Temporizador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NetBeans Workspace/apphotel-xenial" beforeDir="false" afterPath="$PROJECT_DIR$/../NetBeans Workspace/apphotel-xenial" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PSP/Rel2/ej1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../PSP/Rel2/ej1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PMDM_T3A1E3_Login/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PMDM_T3A1E3_Login/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -85,7 +48,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IntelliJ/DI_T2_R2_A1" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AndroidStudioProjects/T3R1A1" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
   </component>
   <component name="RecentsManager">

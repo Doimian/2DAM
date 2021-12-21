@@ -8,9 +8,9 @@ package apptemporizador;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.HBox;
@@ -32,10 +32,11 @@ public class APPTemporizadorController implements Initializable {
     private HBox hboxTemp;
     @FXML
     private Button botonComp;
-
-    private Temporizador temporizador;
+    @FXML
+    private Temporizador temp;
             
     private int tiempo;
+
     
     @Override
     public void initialize(URL url, ResourceBundle rb) 
@@ -47,8 +48,8 @@ public class APPTemporizadorController implements Initializable {
         comboBoxMagnitud.setValue("Segundos");
         
         //Handler al pulsar el boton
-        botonComp.setOnAction(((ActionEvent event) -> {
-        
+        botonComp.setOnAction(((ActionEvent event) -> 
+        {
             
             //Sacamos las unidades
             tiempo = Integer.valueOf(ctbUnidades.getText());
@@ -56,29 +57,39 @@ public class APPTemporizadorController implements Initializable {
             //Vaciamos el campo de texto
             ctbUnidades.setText("");
             
+            temp.setTiempo(tiempo);
+            
+            /*
             //Sacamos la magnitud
             switch(comboBoxMagnitud.getValue())
             {
                 case "Segundos" :
-                                    temporizador = new Temporizador(tiempo,"s");
+                                    temp = new Temporizador(tiempo, "s");
                                     break;
                 case "Minutos" : 
-                                    temporizador = new Temporizador(tiempo,"m");
+                                    temp = new Temporizador(tiempo,"m");
                                     break;
                 case "Horas" :
-                                    temporizador = new Temporizador(tiempo,"h");
+                                    temp = new Temporizador(tiempo,"h");
                                     break;
                 default:
                                     break;
-            }
-            hboxTemp.getChildren().clear();
-            hboxTemp.getChildren().addAll(temporizador, botonComp);
+            }*/
 
         }));
         
         //temporizador.
     }    
-    
-   
+
+    @FXML
+    private void flashAlarm(ActionEvent event) 
+    {
+        // Creamos un alert de tipo informativo
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("Fin del temporizador."); // Cuerpo del mensaje
+        alert.setHeaderText(""); // Establecemos la cabecera del mensaje
+        alert.setTitle("OUT OF TIME"); // Titulo del mensaje
+        alert.show(); // Mostramos el mensaje
+    }
 
 }

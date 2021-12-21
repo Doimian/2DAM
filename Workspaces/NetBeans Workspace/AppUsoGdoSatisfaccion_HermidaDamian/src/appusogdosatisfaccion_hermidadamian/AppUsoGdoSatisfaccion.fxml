@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import GdoSatisfaccion.GdoSatisfaccion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appusogdosatisfaccion_hermidadamian.AppUsoGdoSatisfaccionController">
+   <bottom>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="La encuesta recogerá " />
+            <Label fx:id="lblSat" style="-fx-font-weight: bold; -fx-font-size: 25;" text="0" />
+            <Label text="  % de satisfacción" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <GdoSatisfaccion fx:id="gdoSat" onAction="#actualizaValor"  BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
