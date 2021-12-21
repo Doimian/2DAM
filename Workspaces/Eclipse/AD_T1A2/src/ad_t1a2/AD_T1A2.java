@@ -9,7 +9,6 @@ public class AD_T1A2 {
         
         //Cargar el Driver (de mySql en este caso)
         Class.forName("com.mysql.cj.jdbc.Driver");
-        
         //Establecer una Conexion con la base de datos
         Connection conexion=DriverManager.getConnection("jdbc:mysql://localhost/academia?serverTimezone=UTC","root","Rickyeselpro2");
         
