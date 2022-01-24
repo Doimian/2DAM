@@ -1,0 +1,15 @@
+/home/damian/2DAM/Workspaces/C#/bin/Debug/net6.0/C#
+/home/damian/2DAM/Workspaces/C#/bin/Debug/net6.0/C#.deps.json
+/home/damian/2DAM/Workspaces/C#/bin/Debug/net6.0/C#.runtimeconfig.json
+/home/damian/2DAM/Workspaces/C#/bin/Debug/net6.0/C#.dll
+/home/damian/2DAM/Workspaces/C#/bin/Debug/net6.0/ref/C#.dll
+/home/damian/2DAM/Workspaces/C#/bin/Debug/net6.0/C#.pdb
+/home/damian/2DAM/Workspaces/C#/obj/Debug/net6.0/C#.csproj.AssemblyReference.cache
+/home/damian/2DAM/Workspaces/C#/obj/Debug/net6.0/C#.GeneratedMSBuildEditorConfig.editorconfig
+/home/damian/2DAM/Workspaces/C#/obj/Debug/net6.0/C#.AssemblyInfoInputs.cache
+/home/damian/2DAM/Workspaces/C#/obj/Debug/net6.0/C#.AssemblyInfo.cs
+/home/damian/2DAM/Workspaces/C#/obj/Debug/net6.0/C#.csproj.CoreCompileInputs.cache
+/home/damian/2DAM/Workspaces/C#/obj/Debug/net6.0/C#.dll
+/home/damian/2DAM/Workspaces/C#/obj/Debug/net6.0/ref/C#.dll
+/home/damian/2DAM/Workspaces/C#/obj/Debug/net6.0/C#.pdb
+/home/damian/2DAM/Workspaces/C#/obj/Debug/net6.0/C#.genruntimeconfig.cache
