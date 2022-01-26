@@ -6,15 +6,17 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            //Declaración de variables
-            int numero = 20;
-            int numero2 = 30;
-            
-            Console.Write("Mis numeros son {0} y {1}\n", numero, numero2);
+            //Variables
+            Cuenta cuenta;
+            decimal saldoinicial, ingreso;
 
-            Console.WriteLine("Escribo otra vez el número {0}", numero2);
-
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Introduzca el saldo inicial de su cuenta");
+            saldoinicial = Convert.ToDecimal(Console.ReadLine());
+            cuenta = new Cuenta(saldoinicial);
+            Console.WriteLine("Su cuenta se ha creado con el saldo {0:C}",cuenta.Saldo);
+            Console.WriteLine("Introduce la cantidad que desea ingresar");
+            ingreso = Convert.ToDecimal(Console.ReadLine());
+            cuenta.Ingreso(ingreso);
         }
     }
 }

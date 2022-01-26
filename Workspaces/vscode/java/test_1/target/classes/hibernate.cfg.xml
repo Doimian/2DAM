@@ -6,7 +6,10 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/biblioteca</property>
         <property name="hibernate.connection.username">damian</property>
         <property name="hibernate.connection.password">Rickyeselpro</property>
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <!-- Esta línea de código sólamente se utiliza para crear las tablas, 
+            pero si se quiere que haya persistencia hay que comentarla después-->
+            
+        <!--<property name="hibernate.hbm2ddl.auto">create</property>-->
         <property name="hibernate.connection.pool_size">1</property>
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.show_sql">true</property>
