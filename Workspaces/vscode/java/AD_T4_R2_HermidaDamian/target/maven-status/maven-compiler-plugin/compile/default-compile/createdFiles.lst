@@ -1,0 +1,4 @@
+config/HibernateUtil.class
+Main.class
+entities/Libro.class
+entities/Socio.class

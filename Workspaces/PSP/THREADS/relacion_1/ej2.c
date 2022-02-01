@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <pthread.h>
 #include <unistd.h>
+#include <time.h>
+
 
 //Struct que soporta los argumentos
 struct arg
@@ -15,13 +17,24 @@ void *imprimir_numeros(void *arg)
 {
     //Variables
     int i;
+    time_t tiempoInicial = time(NULL);
     struct arg args = *((struct arg *) arg);
+    int repeticiones = 0;
 
-    //Método que escribe el mensaje en bucle
-    for(i = 1; i <= args.repeticiones; i++)
+    for(;;)
     {
-        printf("Mensaje %d de %d, la letra es %c\n", i, args.repeticiones, args.caracter);
-        sleep(args.latencia);
+        if(repeticiones == args.repeticiones)
+        {
+            return NULL;
+        }
+        if(difftime(tiempoInicial, time(NULL) == (double)args.latencia))
+        {
+            printf("Mensaje %d de %d, la letra es %c\n", i, args.repeticiones, args.caracter);
+            repeticiones++;
+        }else
+        {
+            printf(".");
+        }
     }
     return NULL;
 }
