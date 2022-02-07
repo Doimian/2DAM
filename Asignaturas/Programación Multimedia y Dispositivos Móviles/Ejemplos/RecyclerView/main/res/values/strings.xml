@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <string name="haz_clic">Por favor, haz clic en una opción o desplaza el listado para ver todas las opciones.</string>
+    <string name="sin_datos">No hay datos</string>
+    <string name="insertar">Insertar</string>
+    <string name="borrar">Borrar</string>
+    <string name="mover">Mover</string>
+</resources>

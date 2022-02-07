@@ -1,0 +1,4 @@
+config/HibernateUtil.class
+Main.class
+entities/Empleado.class
+entities/Departamento.class

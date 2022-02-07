@@ -7,9 +7,9 @@
         android:id="@+id/tv_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="32sp"
+        android:background="#E12323"
         android:textColor="@color/white"
-        />
+        android:textSize="32sp" />
 
 
 </FrameLayout>

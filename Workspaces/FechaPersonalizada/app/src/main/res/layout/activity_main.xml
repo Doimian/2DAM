@@ -8,10 +8,9 @@
 
     <com.example.fechapersonalizada.FechaPersonalizada
         android:id="@+id/fechaPersonalizada"
-        android:layout_width="384dp"
-        android:layout_height="48dp"
+        android:layout_width="236dp"
+        android:layout_height="46dp"
         android:layout_marginTop="100dp"
-        android:text=" "
         android:textColor="#DD2C00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"

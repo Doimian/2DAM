@@ -1,9 +1,11 @@
-package com.example.recyclerviewejemplo;
+package com.example.ej3_componentes;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,6 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.RecyclerAdapterViewHolder> {
     //Atributo
     private int num_elementos;
+
+    //Arrays de datos
+    private ImageView[] imagenes = {R.drawable.smartwatch, R.drawable.bombilla};
 
     public RecyclerAdapter(int numero)
     {
@@ -44,17 +49,16 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
 
     public class RecyclerAdapterViewHolder extends RecyclerView.ViewHolder
     {
-        private TextView textoview;
+        private FrameLayout layout;
 
         public RecyclerAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
             //Linko mi variable con el layout.
-            textoview = itemView.findViewById(R.id.tv_item);
         }
 
         public void bind(int posicion)
         {
-            textoview.setText("Opcion "+posicion);
+
         }
     }
 }

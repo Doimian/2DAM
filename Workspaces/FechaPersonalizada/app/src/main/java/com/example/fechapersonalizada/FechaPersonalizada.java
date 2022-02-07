@@ -5,10 +5,12 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.widget.EditText;
+import android.widget.Filter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -42,6 +44,7 @@ public class FechaPersonalizada extends androidx.appcompat.widget.AppCompatEditT
         //Invocamos el método de la superclase
         super.onDraw(canvas);
         canvas.drawRect(0,0, this.getWidth(), this.getHeight(), pnegro);
+        this.setFilters(new InputFilter.LengthFilter[]{new InputFilter.LengthFilter(19)});
     }
 
     @Override
@@ -50,7 +53,7 @@ public class FechaPersonalizada extends androidx.appcompat.widget.AppCompatEditT
         Editable texto;
         if(keyCode != KeyEvent.KEYCODE_DEL) {
 
-            if (this.getText().length() == 2) {
+            if (this.getText().length() == 2){
                 this.setText(this.getText() + "/");
                 this.setSelection(this.getText().length());
             } else if (this.getText().length() == 5) {
