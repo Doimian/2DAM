@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="AppUsoCodReserva_HermidaDamian.jnlp">
+  <information>
+    <title>AppUsoCodReserva_HermidaDamian</title>
+    <vendor>damian</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="AppUsoCodReserva_HermidaDamian.jar" size="3203" download="eager" />
+    <jar href="lib/CodReserva_HermidaDamian.jar" size="9339" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="appusocodreserva_hermidadamian.AppUsoCodReserva_HermidaDamian"  name="AppUsoCodReserva_HermidaDamian" />
+  <update check="always"/>
+</jnlp>

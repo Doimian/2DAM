@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "MN2+KKLly9DeO3Ga9bqvFf2d1cyJtTvltIh/uY8fDbuqzDMQ3isqXdZPmK8/4kl64BvKw+RtRYbmsEclGeEgkQ==",
+  "success": true,
+  "projectFilePath": "/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/herencia.csproj",
+  "expectedPackageFiles": [
+    "/home/damian/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.0/microsoft.aspnetcore.app.ref.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+ <!DOCTYPE index PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Index Version 2.0//EN"
+"http://java.sun.com/products/javahelp/index_2_0.dtd">
+<index version="2.0">
+    <indexitem text="Reserva de Habitaciones" target="Reserva_Habitaciones"/>
+    <indexitem text="Datos del Cliente">
+        <indexitem text="Campo Dni" target="Campo_DNI"/>
+        <indexitem text="Campo Nombre" target="Campo_Nombre"/>
+        <indexitem text="Campo Dirección" target="Campo_Dirección"/>
+        <indexitem text="Campo Localidad" target="Campo_Localidad"/>
+        <indexitem text="Campo Provincia" target="Campo_Provincia"/>
+    </indexitem>
+    <indexitem text="Datos de la Reserva">
+        <indexitem text="Campo Fecha de Llegada" target="Campo_Fecha_de_Llegada"/>
+        <indexitem text="Campo Fecha de Salida" target="Campo_Fecha_de_Salida"/>
+        <indexitem text="Campo Numero de Habitaciones" target="Campo_Numero_de_Habitaciones"/>
+        <indexitem text="Campo Tipo de Habitación" target="Campo_Tipo_de_Habitacion"/>
+        <indexitem text="Campo Regimen" target="Campo_Regimen"/>
+        <indexitem text="Campo Fumador" target="Campo_Fumador"/>
+    </indexitem>
+</index>

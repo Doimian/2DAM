@@ -1,0 +1,20 @@
+<!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 2.0//EN"
+"http://java.sun.com/products/javahelp/toc_2_0.dtd">
+<toc version="2.0">
+    <tocitem text="Reserva de Habitaciones" target="Reserva_Habitaciones"/>
+    <tocitem text="Datos del Cliente">
+        <tocitem text="Campo Dni" target="Campo_DNI"/>
+        <tocitem text="Campo Nombre" target="Campo_Nombre"/>
+        <tocitem text="Campo Dirección" target="Campo_Dirección"/>
+        <tocitem text="Campo Localidad" target="Campo_Localidad"/>
+        <tocitem text="Campo Provincia" target="Campo_Provincia"/>
+    </tocitem>
+    <tocitem text="Datos de la Reserva">
+        <tocitem text="Campo Fecha de Llegada" target="Campo_Fecha_de_Llegada"/>
+        <tocitem text="Campo Fecha de Salida" target="Campo_Fecha_de_Salida"/>
+        <tocitem text="Campo Numero de Habitaciones" target="Campo_Numero_de_Habitaciones"/>
+        <tocitem text="Campo Tipo de Habitación" target="Campo_Tipo_de_Habitacion"/>
+        <tocitem text="Campo Regimen" target="Campo_Regimen"/>
+        <tocitem text="Campo Fumador" target="Campo_Fumador"/>
+    </tocitem>
+</toc>

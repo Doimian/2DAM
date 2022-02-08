@@ -1,0 +1,47 @@
+<html><head>
+  <SCRIPT src="http://java.com/js/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'UIControlSamples.jnlp',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJVSUNvbnRyb2xTYW1wbGVzLmpubHAiPgogIDxpbmZvcm1hdGlvbj4KICAgIDx0aXRsZT5VSUNvbnRyb2xTYW1wbGVzPC90aXRsZT4KICAgIDx2ZW5kb3I+T3JhY2xlPC92ZW5kb3I+CiAgICA8ZGVzY3JpcHRpb24+bnVsbDwvZGVzY3JpcHRpb24+CiAgICA8b2ZmbGluZS1hbGxvd2VkLz4KICA8L2luZm9ybWF0aW9uPgogIDxyZXNvdXJjZXM+CiAgICA8ajJzZSB2ZXJzaW9uPSIxLjYrIiBqYXZhLXZtLWFyZ3M9Ii1EcHJveHlIb3N0PXd3dy1wcm94eS51cy5vcmFjbGUuY29tIC1EcHJveHlQb3J0PTgwICIgIGhyZWY9Imh0dHA6Ly9qYXZhLnN1bi5jb20vcHJvZHVjdHMvYXV0b2RsL2oyc2UiLz4KICAgIDxqYXIgaHJlZj0iVUlDb250cm9sU2FtcGxlcy5qYXIiIHNpemU9IjU2NzMwMiIgZG93bmxvYWQ9ImVhZ2VyIiAvPgogIDwvcmVzb3VyY2VzPgogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjb21ib2JveHNhbXBsZS5Db21ib0JveFNhbXBsZSIgIG5hbWU9IlVJQ29udHJvbFNhbXBsZXMiIC8+CiAgPHVwZGF0ZSBjaGVjaz0iYWx3YXlzIi8+Cjwvam5scD4K'
+            },
+            {
+                javafx : '8.0+',
+                jvmargs : '-DproxyHost=www-proxy.us.oracle.com -DproxyPort=80 '
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedcomboboxsample() {
+        dtjava.embed(
+            {
+                id : 'comboboxsample',
+                url : 'UIControlSamples.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '800',
+                height : '600',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJVSUNvbnRyb2xTYW1wbGVzLmpubHAiPgogIDxpbmZvcm1hdGlvbj4KICAgIDx0aXRsZT5VSUNvbnRyb2xTYW1wbGVzPC90aXRsZT4KICAgIDx2ZW5kb3I+T3JhY2xlPC92ZW5kb3I+CiAgICA8ZGVzY3JpcHRpb24+bnVsbDwvZGVzY3JpcHRpb24+CiAgICA8b2ZmbGluZS1hbGxvd2VkLz4KICA8L2luZm9ybWF0aW9uPgogIDxyZXNvdXJjZXM+CiAgICA8ajJzZSB2ZXJzaW9uPSIxLjYrIiBqYXZhLXZtLWFyZ3M9Ii1EcHJveHlIb3N0PXd3dy1wcm94eS51cy5vcmFjbGUuY29tIC1EcHJveHlQb3J0PTgwICIgIGhyZWY9Imh0dHA6Ly9qYXZhLnN1bi5jb20vcHJvZHVjdHMvYXV0b2RsL2oyc2UiLz4KICAgIDxqYXIgaHJlZj0iVUlDb250cm9sU2FtcGxlcy5qYXIiIHNpemU9IjU2NzMwMiIgZG93bmxvYWQ9ImVhZ2VyIiAvPgogIDwvcmVzb3VyY2VzPgogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjb21ib2JveHNhbXBsZS5Db21ib0JveFNhbXBsZSIgIG5hbWU9IlVJQ29udHJvbFNhbXBsZXMiIC8+CiAgPHVwZGF0ZSBjaGVjaz0iYWx3YXlzIi8+Cjwvam5scD4K'
+            },
+            {
+                javafx : '8.0+',
+                jvmargs : '-DproxyHost=www-proxy.us.oracle.com -DproxyPort=80 '
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedcomboboxsample);
+</script>
+
+</head><body>
+<h2>Test page for <b>UIControlSamples</b></h2>
+  <b>Webstart:</b> <a href='UIControlSamples.jnlp' onclick="return launchApplication('UIControlSamples.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VC9xhczAPMNgSF2EfkdRzwvK6tyoQJS0MS/hVf/Qcvp2J0R0U70iMm92QYKEXQEg/jRlqUog7WoYBkJaMlLFKw==",
+  "success": true,
+  "projectFilePath": "/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej2/Ej2.csproj",
+  "expectedPackageFiles": [
+    "/home/damian/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.0/microsoft.aspnetcore.app.ref.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

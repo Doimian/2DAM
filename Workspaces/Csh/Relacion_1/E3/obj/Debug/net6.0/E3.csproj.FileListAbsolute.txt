@@ -1,0 +1,15 @@
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/bin/Debug/net6.0/E3
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/bin/Debug/net6.0/E3.deps.json
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/bin/Debug/net6.0/E3.runtimeconfig.json
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/bin/Debug/net6.0/E3.dll
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/bin/Debug/net6.0/ref/E3.dll
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/bin/Debug/net6.0/E3.pdb
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/obj/Debug/net6.0/E3.csproj.AssemblyReference.cache
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/obj/Debug/net6.0/E3.GeneratedMSBuildEditorConfig.editorconfig
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/obj/Debug/net6.0/E3.AssemblyInfoInputs.cache
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/obj/Debug/net6.0/E3.AssemblyInfo.cs
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/obj/Debug/net6.0/E3.csproj.CoreCompileInputs.cache
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/obj/Debug/net6.0/E3.dll
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/obj/Debug/net6.0/ref/E3.dll
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/obj/Debug/net6.0/E3.pdb
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/E3/obj/Debug/net6.0/E3.genruntimeconfig.cache

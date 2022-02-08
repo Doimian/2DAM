@@ -1,0 +1,15 @@
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/bin/Debug/net6.0/Ej4
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/bin/Debug/net6.0/Ej4.deps.json
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/bin/Debug/net6.0/Ej4.runtimeconfig.json
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/bin/Debug/net6.0/Ej4.dll
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/bin/Debug/net6.0/ref/Ej4.dll
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/bin/Debug/net6.0/Ej4.pdb
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/obj/Debug/net6.0/Ej4.csproj.AssemblyReference.cache
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/obj/Debug/net6.0/Ej4.GeneratedMSBuildEditorConfig.editorconfig
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/obj/Debug/net6.0/Ej4.AssemblyInfoInputs.cache
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/obj/Debug/net6.0/Ej4.AssemblyInfo.cs
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/obj/Debug/net6.0/Ej4.csproj.CoreCompileInputs.cache
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/obj/Debug/net6.0/Ej4.dll
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/obj/Debug/net6.0/ref/Ej4.dll
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/obj/Debug/net6.0/Ej4.pdb
+/home/damian/2DAM/Workspaces/Csh/Relacion_1/Ej4/obj/Debug/net6.0/Ej4.genruntimeconfig.cache

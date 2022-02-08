@@ -1,0 +1,15 @@
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/bin/Debug/net6.0/herencia
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/bin/Debug/net6.0/herencia.deps.json
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/bin/Debug/net6.0/herencia.runtimeconfig.json
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/bin/Debug/net6.0/herencia.dll
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/bin/Debug/net6.0/ref/herencia.dll
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/bin/Debug/net6.0/herencia.pdb
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/obj/Debug/net6.0/herencia.csproj.AssemblyReference.cache
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/obj/Debug/net6.0/herencia.GeneratedMSBuildEditorConfig.editorconfig
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/obj/Debug/net6.0/herencia.AssemblyInfoInputs.cache
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/obj/Debug/net6.0/herencia.AssemblyInfo.cs
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/obj/Debug/net6.0/herencia.csproj.CoreCompileInputs.cache
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/obj/Debug/net6.0/herencia.dll
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/obj/Debug/net6.0/ref/herencia.dll
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/obj/Debug/net6.0/herencia.pdb
+/home/damian/2DAM/Workspaces/Csh/Pruebas/herencia/obj/Debug/net6.0/herencia.genruntimeconfig.cache

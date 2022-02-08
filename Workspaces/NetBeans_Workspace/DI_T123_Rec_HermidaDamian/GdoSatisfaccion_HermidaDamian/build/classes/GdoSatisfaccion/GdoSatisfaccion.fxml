@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<fx:root type="javafx.scene.layout.VBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: black; -fx-border-width: 2;" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <Label text="Indica tu grado de satisfacción del 0 al 100%"  style="-fx-font-weight: bold;" />
+      <HBox>
+         <children>
+            <Slider fx:id="slider" />
+            <ProgressBar fx:id="pBar" prefWidth="200.0" progress="0.0" />
+            <ProgressIndicator fx:id="pInd" progress="0.0" />
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</fx:root>

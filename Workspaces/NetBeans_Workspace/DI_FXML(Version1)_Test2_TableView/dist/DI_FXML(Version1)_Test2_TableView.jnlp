@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="DI_FXML(Version1)_Test2_TableView.jnlp">
+  <information>
+    <title>DI_FXML(Version1)_Test2_TableView</title>
+    <vendor>usuario</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="DI_FXML(Version1)_Test2_TableView.jar" size="8495" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="di_fxml.version1._test2_tableview.DI_FXMLVersion1_Text2_TableView"  name="DI_FXML(Version1)_Test2_TableView" />
+  <update check="always"/>
+</jnlp>

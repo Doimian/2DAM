@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE map PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 2.0//EN" "http://java.sun.com/products/javahelp/map_2_0.dtd">
+<map version="2.0">
+    <mapID target="Reserva_Habitaciones" url="fuentes/Reserva_Hab.html"/>
+    <mapID target="Campo_DNI" url="fuentes/Reserva_Hab_DNI.html"/>
+    <mapID target="Campo_Nombre" url="fuentes/Reserva_Hab_Nombre.html"/>
+    <mapID target="Campo_Dirección" url="fuentes/Reserva_Hab_Direccion.html"/>
+    <mapID target="Campo_Localidad" url="fuentes/Reserva_Hab_Localidad.html"/>
+    <mapID target="Campo_Provincia" url="fuentes/Reserva_Hab_Provincia.html"/>
+    <mapID target="Campo_Fecha_de_Llegada" url="fuentes/Reserva_Hab_Fecha_Llegada.html"/>
+    <mapID target="Campo_Fecha_de_Salida" url="fuentes/Reserva_Hab_Fecha_Salida.html"/>
+    <mapID target="Campo_Numero_de_Habitaciones" url="fuentes/Reserva_Hab_Num_Hab.html"/>
+    <mapID target="Campo_Tipo_de_Habitacion" url="fuentes/Reserva_Hab_Tipo_Hab.html"/>
+    <mapID target="Campo_Regimen" url="fuentes/Reserva_Hab_Regimen.html"/>
+    <mapID target="Campo_Fumador" url="fuentes/Reserva_Hab_Fumador.html"/>
+</map>
