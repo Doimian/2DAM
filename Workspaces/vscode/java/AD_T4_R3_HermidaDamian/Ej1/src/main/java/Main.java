@@ -143,6 +143,7 @@ public class Main
         String flush = sc.nextLine();
 
         //Sacamos los datos
+        /*
         Query queryEmp = sesionHibernate.createQuery("from Empleado where dpto.codept = :cod");
         queryEmp.setParameter("cod", cod);
         List<Empleado> empleados = queryEmp.list();
@@ -152,6 +153,15 @@ public class Main
         for(Empleado empleado : empleados)
         {
             System.out.println(empleado.getNombre() + " " + empleado.getApellidos() + " " + empleado.getSalario() + "€ (Dep: " +empleado.getDpto().getNombre() + " Nº: " + empleado.getDpto().getCodept() + ") ");
+        }
+        */
+        Query query = sesionHibernate.createQuery("from Departamento where codept = :pinga");
+        query.setParameter("pinga", cod);
+        Departamento dep = (Departamento) query.getSingleResult();
+        
+        for (Empleado empleado : dep.getEmpleados()) {
+            System.out.println("El empleado se llama " + empleado.getNombre());
+            
         }
     }
     public static void listarEmpleadoDepNombre()

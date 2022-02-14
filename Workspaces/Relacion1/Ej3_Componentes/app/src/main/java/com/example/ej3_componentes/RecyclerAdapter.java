@@ -1,26 +1,30 @@
 package com.example.ej3_componentes;
 
 import android.content.Context;
+import android.content.ContextWrapper;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.RecyclerAdapterViewHolder> {
-    //Atributo
-    private int num_elementos;
+    //Atributos
+    private Dispositivo[] dispositivos;
 
-    //Arrays de datos
-    private ImageView[] imagenes = {R.drawable.smartwatch, R.drawable.bombilla};
 
-    public RecyclerAdapter(int numero)
+    public RecyclerAdapter(Dispositivo[] dis)
     {
-        num_elementos = numero;
+        dispositivos = dis;
     }
 
     @NonNull
@@ -44,21 +48,28 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
     //Devuelve el número de items de mi recyclerview
     @Override
     public int getItemCount() {
-        return num_elementos;
+        return dispositivos.length;
     }
 
     public class RecyclerAdapterViewHolder extends RecyclerView.ViewHolder
     {
-        private FrameLayout layout;
+        private ImageView image;
+        private EditText text;
+        private CheckBox seleccionado;
 
         public RecyclerAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
             //Linko mi variable con el layout.
+            image = itemView.findViewById(R.id.tv_imageView);
+            text = itemView.findViewById(R.id.tv_text);
+            seleccionado = itemView.findViewById(R.id.tv_checkBox);
         }
 
         public void bind(int posicion)
         {
-
+            image.setImageResource(dispositivos[posicion].getImagen());
+            text.setText(dispositivos[posicion].getTexto());
+            seleccionado.setOnCheckedChangeListener((buttonView, isChecked) -> dispositivos[posicion].setSelected());
         }
     }
 }

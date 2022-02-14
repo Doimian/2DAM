@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ajUaKOjrBqjRB687xxBJhyeQHw4RRwcmSHNRCafP7FS2FQ9r7cK3Nc0jtzN2+w9sfcnXUXe0WeSxV7btAou21w==",
+  "success": true,
+  "projectFilePath": "/home/damian/2DAM/Workspaces/Csh/Examen_1/Examen_1.csproj",
+  "expectedPackageFiles": [
+    "/home/damian/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.0/microsoft.aspnetcore.app.ref.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
