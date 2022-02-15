@@ -4,18 +4,15 @@ class Trama //Clase principal que define las tramas
    private int n_puerto;
    private int prioridad;
    private string contenido;
-   private TimeOnly momento;
 
 
-   //Constructores
+   //Constructor
    public Trama(int n_puerto, int prioridad, string trama)
    {
         N_puerto = n_puerto;
         Prioridad = prioridad;
         Contenido = trama;
-        Momento = TimeOnly.FromTimeSpan(TimeSpan.Zero);
    }
-
 
    //Propiedades
    public int N_puerto
@@ -49,17 +46,6 @@ class Trama //Clase principal que define las tramas
         set
         {
             contenido = value;
-        }
-    }
-    public TimeOnly Momento
-    {
-        get
-        {
-            return momento;
-        }
-        set
-        {
-            momento = value;
         }
     }
 }

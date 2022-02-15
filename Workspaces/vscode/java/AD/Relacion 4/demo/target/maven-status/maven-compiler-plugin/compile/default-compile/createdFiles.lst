@@ -1,0 +1,4 @@
+config/HibernateUtil.class
+Programa.class
+entities/Asignatura.class
+entities/Alumno.class

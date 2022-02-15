@@ -16,25 +16,27 @@ class EthernetCard
     }
 
     //Métodos
+    //Añade las tramas que le llegan a la tarjeta Ethernet al Buffer estático
     public void addTrama(Trama trama)
     {
-        bool staticBufferFull = true;
-        bool alreadyAdded = false;
-        Trama deleteIndex;
-
-        if(StaticBuffer.Count <4)
+        //Si el buffer tiene menos de 4 elementos le añadimos la trama
+        if(StaticBuffer.Count < 4 )
             StaticBuffer.Add(trama);
-        
+        //Si el buffer estático está lleno:
         else
         {
+            //Se hace un hueco
             almacenarTrama();
+            //Se añade la trama
             StaticBuffer.Add(trama);
         }
     }
     public void almacenarTrama()
     {
-        //Por ahora solo comparamos con la prioridad
+        //Se saca la priodidad más grande
         int maxPrio = StaticBuffer.Max(t => t.Prioridad);
+
+        //Se mueve la trama con esa prioridad con el metodo moverTrama
         foreach(Trama tr in StaticBuffer)
         {
             if(tr.Prioridad == maxPrio)
@@ -43,38 +45,11 @@ class EthernetCard
                 break;
             }
         }
-    /*
-        for(int i = 1; i < 4; i++)
-        {
-            if(StaticBuffer[i].Prioridad >= StaticBuffer[i-1].Prioridad)
-            {
-                if(StaticBuffer[i].Prioridad == StaticBuffer[i-1].Prioridad)
-                {
-                    //Comparamos según el orden de llegada
-                    if((StaticBuffer[i].Momento.CompareTo(StaticBuffer[i-1].Momento)) >= 0)
-                    {
-                        moverTrama(i-1);
-                    }
-                    else
-                    {
-                        moverTrama(i);
-                    }
-                }
-                else
-                {
-                    moverTrama(i);
-                }
-            }
-            else
-            {
-                moverTrama(i-1);
-            }
-        }
-        */
     }
 
     public void moverTrama(Trama trama)
     {
+        //Comprobamos el puerto que tiene la trama que se va a mover
         switch(trama.N_puerto)
         {
             case 1:
@@ -96,6 +71,7 @@ class EthernetCard
         }
     }
 
+    //Método para mostrar las tramas que tienen los Buffers almacenadas
     public void mostrarTramas()
     {
         //Mostramos el buffer estático

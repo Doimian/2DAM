@@ -9,7 +9,6 @@ class UDP : Trama
 
     public override string ToString()
     {
-        Console.WriteLine("(UDP) Puerto: "+N_puerto+", Prioridad: "+Prioridad+", Contenido: {0}",Contenido);
-        return "";
+        return "(UDP) Puerto: "+N_puerto+", Prioridad: "+Prioridad+", Contenido: "+Contenido;
     }
 }
