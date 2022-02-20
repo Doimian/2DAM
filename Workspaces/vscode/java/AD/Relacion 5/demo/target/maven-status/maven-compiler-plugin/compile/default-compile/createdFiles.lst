@@ -1,0 +1,6 @@
+config/HibernateUtil.class
+Init.class
+entities/Jugadores.class
+entities/Equipos.class
+entities/EstadisticasId.class
+entities/Estadisticas.class

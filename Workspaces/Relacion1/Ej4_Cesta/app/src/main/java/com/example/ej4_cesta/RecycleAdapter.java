@@ -1,8 +1,10 @@
 package com.example.ej4_cesta;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -10,11 +12,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.RecyclerAdapterViewHolder>{
+
+
     //Atributos
-    List<TextView> elementos;
+    ArrayList<Elemento> elementos;
+
+    public RecycleAdapter(ArrayList<Elemento> elementos) {
+        this.elementos = elementos;
+    }
 
     @NonNull
     @Override
@@ -34,9 +43,20 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.Recycler
         holder.bind(position);
     }
 
-    public void addElemento(TextView elemento)
+    public void addElemento(Elemento elemento)
     {
         elementos.add(elemento);
+        notificar();
+    }
+
+    private void notificar() {
+        notifyDataSetChanged();
+    }
+
+    public void eliminarElemento(int item)
+    {
+        elementos.remove(item);
+        notificar();
     }
 
     @Override
@@ -44,19 +64,43 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.Recycler
 
     public class RecyclerAdapterViewHolder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener
     {
-        private TextView textoview;
+        private Elemento textoview;
 
         public RecyclerAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
             //Linko mi variable con el layout
-            textoview = itemView.findViewById(R.id.tv_item);
+            textoview = itemView.findViewById(R.id.elemento);
             itemView.setOnCreateContextMenuListener(this);
+            textoview.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    if(textoview.tachado)
+                    {
+                        textoview.setText("hola");
+                        notificar();
+                        //tachar el texto
+
+                    }else
+                    {
+                        textoview.setText("hola");
+                        notificar();
+
+                    }
+
+                    Log.d("a", "llega" + textoview.getText().toString());
+                }
+            });
+
         }
 
         public void bind(int posicion)
         {
-            textoview.setText(elementos.get(posicion).getText());
+
+            textoview.setText(elementos.get(posicion).getText().toString());
+
         }
+
 
         @Override
         public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {

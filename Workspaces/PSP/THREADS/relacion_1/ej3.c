@@ -1,59 +1,45 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <pthread.h>
-#include <semaphore.h>
+#include <unistd.h>
+#include <stdlib.h>
 
-#define NUM_VECES 100
+#define MATRIX_COLS 5
+#define MATRIX_FILAS 5
 
-sem_t sem1;
-sem_t sem2;
-
-void *escribePing(void *arg)
+const int matrix[MATRIX_FILAS][MATRIX_COLS] =
 {
-    
-    int i;
+    {4,7,2,8,1},
+    {5,7,3,6,4},
+    {5,6,4,7,2},
+    {6,4,7,3,7},
+    {4,6,1,3,2}
+};
 
-    //Inicio
-    for(i = 0; i < NUM_VECES; i++)
+void* suma_fila(void *arg)
+{
+    int *num_fila = (int *)&arg;
+    int *suma_total = malloc(sizeof(int));
+    int i;
+    for(i = 0; i <MATRIX_COLS; i++)
     {
-        sem_wait(&sem1);
-        printf("Ping ");
-        sem_post(&sem2);
+        suma_total += matrix[*num_fila][i];
     }
-    return NULL;
+    pthread_exit((void *) suma_total);
 }
 
-void *escribePong(void *arg)
-{
-    int i;
-    //Inicio
-    for (i = 0; i<NUM_VECES; i++)
-    {
-        sem_wait(&sem2);
-        printf("Pong \n");
-        sem_post(&sem1);
-    }
-    return NULL;
-}
 
 
 int main(void)
 {
-
-    //Declaración de variables
-    pthread_t hilo1, hilo2;
-
-    //Inicio
-    //Utilizo semaforos
-    sem_init(&sem1, 0, 1);
-    sem_init(&sem2, 0,0);
-    
-    //Crear hilos
-    pthread_create(&hilo1, NULL, &escribePing, NULL);
-    pthread_create(&hilo2, NULL, &escribePong, NULL);
-
-    pthread_join(hilo1, NULL);
-    pthread_join(hilo2, NULL);
-
+    pthread_t thread;
+    int i;
+    int resultado_fila;
+    int *resultado_total;
+    for(i = 0; i <MATRIX_FILAS; i++)
+    {
+        pthread_create(&thread, NULL, &suma_fila, NULL);
+        pthread_join(thread, (void **) &resultado_total);
+        printf("%d\n", *resultado_total);
+    }
     return 0;
 }

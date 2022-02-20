@@ -15,9 +15,9 @@
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
         <!-- mapping de las clases-->
-        <mapping class="entities.Alumno"/>
-        <mapping class="entities.Asignatura"/>
-        <!--<mapping resource="Empleado.hbm.xml"/>-->
-        <!--mapping resource="Departamento.hbm.xml"/>-->
+        <mapping class="entities.Equipos"/>
+        <mapping class="entities.Estadisticas"/>
+        <mapping class="entities.EstadisticasId"/>
+        <mapping class="entities.Jugadores"/>
     </session-factory>
 </hibernate-configuration>
